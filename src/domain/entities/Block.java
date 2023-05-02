@@ -5,16 +5,20 @@ public class Block {
     private int _currentLife;
     private int _maxLife;
 
+    private boolean _isDominated;
+
 
     public Block(String _blockName, int _maxLife) {
         this._blockName = _blockName;
         this.set_maxLife(_maxLife);
         this.set_currentLife(_maxLife);
+        this._isDominated = false;
     }
     public Block(String _blockName, int _maxLife, int _currentLife) {
         this._blockName = _blockName;
         this.set_maxLife(_maxLife);
         this.set_currentLife(_currentLife);
+        this._isDominated = false;
     }
 
     public void set_blockName(String _blockName) {
@@ -48,5 +52,13 @@ public class Block {
 
     public int get_maxLife() {
         return _maxLife;
+    }
+
+    public boolean get_isDominated() {
+        return _isDominated;
+    }
+
+    public void set_isDominated(boolean _isDominated) {
+        this._isDominated = _isDominated;
     }
 }

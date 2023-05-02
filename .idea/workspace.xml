@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maua-war.iml" beforeDir="false" afterPath="$PROJECT_DIR$/maua-war.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Block.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,38 +45,7 @@
     "settings.editor.selected.configurable": "settings.sync"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BlockEntityShould">
-    <configuration name="BlockEntityShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.BlockEntityShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BlockEntityShould.Set_Current_Life_As_5_When_Bigger_Than_MaxLife" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.BlockEntityShould" />
-      <option name="METHOD_NAME" value="Set_Current_Life_As_5_When_Bigger_Than_MaxLife" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PlayerEntityShould.Not_Add_Same_Block_Twice">
     <configuration name="BlockEntityShould.Set_Max_Life_As_0_When_Less_Than_Zero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
@@ -94,11 +62,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayerEntityShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.PlayerEntityShould" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerEntityShould.Add_A_Dominated_Block_To_HashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.PlayerEntityShould" />
+      <option name="METHOD_NAME" value="Add_A_Dominated_Block_To_HashMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerEntityShould.Not_Add_Same_Block_Twice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.PlayerEntityShould" />
+      <option name="METHOD_NAME" value="Not_Add_Same_Block_Twice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests.unit in maua-war" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BlockEntityShould" />
+        <item itemvalue="JUnit.PlayerEntityShould.Not_Add_Same_Block_Twice" />
+        <item itemvalue="JUnit.tests.unit in maua-war" />
+        <item itemvalue="JUnit.PlayerEntityShould" />
+        <item itemvalue="JUnit.PlayerEntityShould.Add_A_Dominated_Block_To_HashMap" />
         <item itemvalue="JUnit.BlockEntityShould.Set_Max_Life_As_0_When_Less_Than_Zero" />
-        <item itemvalue="JUnit.BlockEntityShould.Set_Current_Life_As_5_When_Bigger_Than_MaxLife" />
       </list>
     </recent_temporary>
   </component>
