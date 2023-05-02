@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class PlayerEntityShould {
     @Test
-    public void Add_A_Dominated_Block_To_HashMap(){
+    public void Add_A_Dominated_Block_Into_HashMap(){
         Player mockPlayer = new Player("Jogador 1", Color.BLUE);
 
         Block mockBlock = new Block("Bloco A", 10);
