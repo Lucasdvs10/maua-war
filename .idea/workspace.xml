@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/PlayerEntityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/PlayerEntityShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,8 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "settings.sync"
+    "ToolWindowCoverage.ShowToolbar": "false",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.tests.unit in maua-war">
@@ -144,5 +143,10 @@
       <updated>1683027123707</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/maua_war$tests_unit_in_maua_war.ic" NAME="tests.unit in maua-war Coverage Results" MODIFIED="1683038124382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tests.unit.*</FILTER>
+    </SUITE>
   </component>
 </project>
