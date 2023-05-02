@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/PlayerEntityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/PlayerEntityShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.tests.unit in maua-war">
-    <configuration name="BlockEntityShould.Set_Max_Life_As_0_When_Less_Than_Zero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageRoundsUseCaseShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
@@ -54,29 +56,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.BlockEntityShould" />
-      <option name="METHOD_NAME" value="Set_Max_Life_As_0_When_Less_Than_Zero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerEntityShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.PlayerEntityShould" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.ManageRoundsUseCaseShould" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerEntityShould.Add_A_Dominated_Block_To_HashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageRoundsUseCaseShould.Set_Current_Round_As_1_When_Call_GoToNextRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.ManageRoundsUseCaseShould" />
+      <option name="METHOD_NAME" value="Set_Current_Round_As_1_When_Call_GoToNextRound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerEntityShould.Have_Name_Jogador1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
@@ -86,7 +88,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests.unit" />
       <option name="MAIN_CLASS_NAME" value="tests.unit.PlayerEntityShould" />
-      <option name="METHOD_NAME" value="Add_A_Dominated_Block_To_HashMap" />
+      <option name="METHOD_NAME" value="Have_Name_Jogador1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,10 +127,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.tests.unit in maua-war" />
+        <item itemvalue="JUnit.PlayerEntityShould.Have_Name_Jogador1" />
+        <item itemvalue="JUnit.ManageRoundsUseCaseShould" />
+        <item itemvalue="JUnit.ManageRoundsUseCaseShould.Set_Current_Round_As_1_When_Call_GoToNextRound" />
         <item itemvalue="JUnit.PlayerEntityShould.Not_Add_Same_Block_Twice" />
-        <item itemvalue="JUnit.PlayerEntityShould" />
-        <item itemvalue="JUnit.PlayerEntityShould.Add_A_Dominated_Block_To_HashMap" />
-        <item itemvalue="JUnit.BlockEntityShould.Set_Max_Life_As_0_When_Less_Than_Zero" />
       </list>
     </recent_temporary>
   </component>
