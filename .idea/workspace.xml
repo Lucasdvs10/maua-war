@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Adapters/connection_database/connection_database/put_a_question_exemplo/PutAQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/connection_database/connection_database/DAO/QuestionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/connection_database/connection_database/DAO/QuestionDAOMYSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/connection_database/connection_database/put_a_question/PutAQuestion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entities/QuestionForConnection.java" beforeDir="false" />
-    </list>
+    <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
