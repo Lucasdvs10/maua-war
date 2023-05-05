@@ -13,6 +13,10 @@ public class Question {
         this._correctAlternative = _correctAlternative;
     }
 
+    public void AddAlternativeToHashMap(Character alternativeLetter, String alternativeStatement){
+        this._alternativesHashMap.put(alternativeLetter, alternativeStatement);
+    }
+
     public String get_statement() {
         return _statement;
     }
