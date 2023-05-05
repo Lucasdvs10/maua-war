@@ -1,6 +1,6 @@
-package Adapters.connection_database.connection_database.DAO;
+package Adapters.connection_database.DAO;
 
-import Adapters.connection_database.connection_database.MauawarDatabaseConnection;
+import Adapters.connection_database.MauawarDatabaseConnection;
 import domain.entities.Question;
 
 import java.sql.PreparedStatement;
@@ -8,8 +8,9 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 
-public class QuestionDAOMYSQL {
+public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
     
+    @Override
     public void RegisterQuestion(Question question){
 
         String sql_string = "INSERT INTO questions (QUESTION, ANSWER_A, ANSWER_B, ANSWER_C, ANSWER_D, CORRECT_ANSWER) VALUES (?, ?, ?, ?, ?, ?)";
@@ -33,5 +34,10 @@ public class QuestionDAOMYSQL {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public Question GetQuestion(String questionCode) { //Coloquei o question code como String pq ainda não definimos como será a chave primária da question
+        return null;
     }
 }

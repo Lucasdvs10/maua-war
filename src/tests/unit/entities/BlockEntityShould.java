@@ -1,4 +1,4 @@
-package tests.unit;
+package tests.unit.entities;
 
 import domain.entities.Block;
 import org.junit.jupiter.api.Assertions;

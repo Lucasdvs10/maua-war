@@ -1,4 +1,4 @@
-package tests.unit;
+package tests.unit.entities;
 
 import domain.usecase.ManageRoundsUseCase;
 import org.junit.jupiter.api.Assertions;

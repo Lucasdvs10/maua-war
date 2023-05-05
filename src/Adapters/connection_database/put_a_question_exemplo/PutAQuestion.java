@@ -1,6 +1,6 @@
-package Adapters.connection_database.connection_database.put_a_question_exemplo;
+package Adapters.connection_database.put_a_question_exemplo;
 
-import Adapters.connection_database.connection_database.DAO.QuestionDAOMYSQL;
+import Adapters.connection_database.DAO.QuestionDAOMYSQL;
 import domain.entities.Question;
 
 public class PutAQuestion {
