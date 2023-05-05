@@ -42,9 +42,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ToolWindowCoverage.ShowToolbar": "false",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/lucas/Desktop/Projetos atuais/maua-war",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Adapters.connection_database" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.tests.unit in maua-war">
     <configuration name="ManageRoundsUseCaseShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
@@ -141,8 +156,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683027123707</updated>
+      <workItem from="1683247436770" duration="999000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maua_war$tests_unit_in_maua_war.ic" NAME="tests.unit in maua-war Coverage Results" MODIFIED="1683038124382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
