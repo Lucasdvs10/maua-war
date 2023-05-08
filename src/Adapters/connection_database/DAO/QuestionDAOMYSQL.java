@@ -37,7 +37,12 @@ public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
     }
 
     @Override
-    public Question GetQuestion(String questionCode) { //Coloquei o question code como String pq ainda não definimos como será a chave primária da question
+    public Question GetQuestionById(int questionId) {
+        return null;
+    }
+
+    @Override
+    public Question GetRandomQuestion() {
         return null;
     }
 }

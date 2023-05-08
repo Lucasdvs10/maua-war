@@ -17,7 +17,12 @@ public class QuestionDAOMock implements Adapters.IQuestionDAO{
     }
 
     @Override
-    public Question GetQuestion(String questionCode) {
+    public Question GetQuestionById(int questionId) {
+        return null;
+    }
+
+    @Override
+    public Question GetRandomQuestion() {
         return null;
     }
 
