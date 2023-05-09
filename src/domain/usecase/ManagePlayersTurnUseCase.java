@@ -2,6 +2,7 @@ package domain.usecase;
 
 public class ManagePlayersTurnUseCase { //Todo: Implementar o observer pattern e emitir um
                                         // evento quando todos os players jogarem no round
+    
     private int[] _allPlayersIndexArray;
 
     private int _currentPlayerID;
