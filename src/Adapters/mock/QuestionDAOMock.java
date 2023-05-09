@@ -3,6 +3,7 @@ package Adapters.mock;
 import domain.entities.Question;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class QuestionDAOMock implements Adapters.IQuestionDAO{
     private ArrayList<Question> _questionsDBMock;
@@ -31,7 +32,11 @@ public class QuestionDAOMock implements Adapters.IQuestionDAO{
 
     @Override
     public Question GetRandomQuestion() {
-        return null;
+        Random random = new Random();
+
+        int randomIndex = random.nextInt(0, this._questionsDBMock.size());
+
+        return GetQuestionById(randomIndex);
     }
 
     public ArrayList<Question> get_questionsDBMock() {
