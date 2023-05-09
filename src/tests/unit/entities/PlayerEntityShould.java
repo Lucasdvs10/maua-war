@@ -40,7 +40,7 @@ public class PlayerEntityShould {
     public void Not_Have_Index_Less_Than_Zero(){
         Player mockPlayer = new Player(-5, Color.red);
 
-        Assertions.assertEquals(0, mockPlayer.get_playerIndex());
+        Assertions.assertEquals(0, mockPlayer.get_playerID());
     }
 
     @Test

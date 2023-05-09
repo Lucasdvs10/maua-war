@@ -4,12 +4,12 @@ import java.awt.*;
 import java.util.HashMap;
 
 public class Player {
-    private int _playerIndex;
+    private int _playerID;
     private Color _playerColor;
     private HashMap<String, Block> _dominatedBlocksHashMap;
 
     public Player(int playerIndex, Color _playerColor) {
-        this.set_playerIndex(playerIndex);
+        this.set_playerID(playerIndex);
         this._playerColor = _playerColor;
         this._dominatedBlocksHashMap = new HashMap<>();
     }
@@ -25,18 +25,18 @@ public class Player {
     }
 
     public String GetPlayerName(){
-        return String.format("Jogador %d", this._playerIndex);
+        return String.format("Jogador %d", this._playerID);
     }
-    public int get_playerIndex() {
-        return _playerIndex;
+    public int get_playerID() {
+        return _playerID;
     }
 
-    public void set_playerIndex(int _playerIndex) {
-        if(_playerIndex <= 0){
-            this._playerIndex = 0;
+    public void set_playerID(int _playerID) {
+        if(_playerID <= 0){
+            this._playerID = 0;
             return;
         }
-        this._playerIndex = _playerIndex;
+        this._playerID = _playerID;
     }
 
     public void set_dominatedBlocksHashMap(HashMap<String, Block> _dominatedBlocksHashMap) {
