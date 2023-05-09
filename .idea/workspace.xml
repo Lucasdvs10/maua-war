@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maua-war.iml" beforeDir="false" afterPath="$PROJECT_DIR$/maua-war.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/eventsystem/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/eventsystem/EventManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,64 +64,64 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.tests.unit in maua-war">
-    <configuration name="QuestionDAOMockShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventManagerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionDAOMockShould.Add_One_Question_To_Mock_Data_Base" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventManagerShould.Add_Mock_Listeners_To_List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
-      <option name="METHOD_NAME" value="Add_One_Question_To_Mock_Data_Base" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
+      <option name="METHOD_NAME" value="Add_Mock_Listeners_To_List" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionDAOMockShould.Return_Null_When_Id_Doesnt_Exist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventManagerShould.Not_Create_An_Event_If_It_Already_Exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
-      <option name="METHOD_NAME" value="Return_Null_When_Id_Doesnt_Exist" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
+      <option name="METHOD_NAME" value="Not_Create_An_Event_If_It_Already_Exists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionDAOMockShould.Return_Question_With_Id_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventManagerShould.Turn_Only_Mock2_Flag_To_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
-      <option name="METHOD_NAME" value="Return_Question_With_Id_1" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
+      <option name="METHOD_NAME" value="Turn_Only_Mock2_Flag_To_True" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,10 +144,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.tests.unit in maua-war" />
-        <item itemvalue="JUnit.QuestionDAOMockShould" />
-        <item itemvalue="JUnit.QuestionDAOMockShould.Return_Null_When_Id_Doesnt_Exist" />
-        <item itemvalue="JUnit.QuestionDAOMockShould.Return_Question_With_Id_1" />
-        <item itemvalue="JUnit.QuestionDAOMockShould.Add_One_Question_To_Mock_Data_Base" />
+        <item itemvalue="JUnit.EventManagerShould.Turn_Only_Mock2_Flag_To_True" />
+        <item itemvalue="JUnit.EventManagerShould" />
+        <item itemvalue="JUnit.EventManagerShould.Add_Mock_Listeners_To_List" />
+        <item itemvalue="JUnit.EventManagerShould.Not_Create_An_Event_If_It_Already_Exists" />
       </list>
     </recent_temporary>
   </component>
@@ -161,6 +162,7 @@
       <workItem from="1683247436770" duration="999000" />
       <workItem from="1683320553318" duration="1880000" />
       <workItem from="1683588526791" duration="2957000" />
+      <workItem from="1683659115686" duration="2959000" />
     </task>
     <servers />
   </component>

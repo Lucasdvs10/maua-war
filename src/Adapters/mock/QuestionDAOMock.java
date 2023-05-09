@@ -38,7 +38,7 @@ public class QuestionDAOMock implements Adapters.IQuestionDAO{
 
         return GetQuestionById(randomIndex);
     }
- 
+
     public ArrayList<Question> get_questionsDBMock() {
         return _questionsDBMock;
     }
