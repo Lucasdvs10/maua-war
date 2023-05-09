@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="" />
+    <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/connection_database/put_a_question_exemplo/PutAQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/connection_database/put_a_question_exemplo/PutAQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/adapters/QuestionDAOMockShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/adapters/QuestionDAOMockShould.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,37 +65,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.tests.unit in maua-war">
-    <configuration name="ManageRoundsUseCaseShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.ManageRoundsUseCaseShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageRoundsUseCaseShould.Set_Current_Round_As_1_When_Call_GoToNextRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.ManageRoundsUseCaseShould" />
-      <option name="METHOD_NAME" value="Set_Current_Round_As_1_When_Call_GoToNextRound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlayerEntityShould.Have_Name_Jogador1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
@@ -106,17 +81,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerEntityShould.Not_Add_Same_Block_Twice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuestionDAOMockShould.Add_One_Question_To_Mock_Data_Base" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.*" />
+          <option name="PATTERN" value="tests.unit.adapters.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.PlayerEntityShould" />
-      <option name="METHOD_NAME" value="Not_Add_Same_Block_Twice" />
+      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
+      <option name="METHOD_NAME" value="Add_One_Question_To_Mock_Data_Base" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionDAOMockShould.Return_Null_When_Id_Doesnt_Exist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
+      <option name="METHOD_NAME" value="Return_Null_When_Id_Doesnt_Exist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionDAOMockShould.Return_Question_With_Id_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.QuestionDAOMockShould" />
+      <option name="METHOD_NAME" value="Return_Question_With_Id_1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.tests.unit in maua-war" />
+        <item itemvalue="JUnit.QuestionDAOMockShould.Return_Null_When_Id_Doesnt_Exist" />
+        <item itemvalue="JUnit.QuestionDAOMockShould.Return_Question_With_Id_1" />
+        <item itemvalue="JUnit.QuestionDAOMockShould.Add_One_Question_To_Mock_Data_Base" />
         <item itemvalue="JUnit.PlayerEntityShould.Have_Name_Jogador1" />
-        <item itemvalue="JUnit.ManageRoundsUseCaseShould" />
-        <item itemvalue="JUnit.ManageRoundsUseCaseShould.Set_Current_Round_As_1_When_Call_GoToNextRound" />
-        <item itemvalue="JUnit.PlayerEntityShould.Not_Add_Same_Block_Twice" />
       </list>
     </recent_temporary>
   </component>
@@ -156,6 +163,7 @@
       <updated>1683027123707</updated>
       <workItem from="1683247436770" duration="999000" />
       <workItem from="1683320553318" duration="1880000" />
+      <workItem from="1683588526791" duration="2394000" />
     </task>
     <servers />
   </component>

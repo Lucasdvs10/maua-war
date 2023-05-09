@@ -6,7 +6,7 @@ import domain.entities.Question;
 public class PutAQuestion {
     public static void main(String[] args) throws Exception {
 
-        Question questionOne = new Question("Quantos dedos tem uma mao?", 'C');
+        Question questionOne = new Question("Quantos dedos tem uma mao?", 'C', 42);
 
         questionOne.AddAlternativeToHashMap('A', "9");
         questionOne.AddAlternativeToHashMap('B', "122");
