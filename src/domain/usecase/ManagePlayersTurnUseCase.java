@@ -1,10 +1,10 @@
 package domain.usecase;
 
-public class ManagePlayersTurnUseCase { //Todo: Implementar o observer pattern e emitir um
-                                        // evento quando todos os players jogarem no round
-    
-    private int[] _allPlayersIndexArray;
+import domain.usecase.eventsystem.EventManager;
 
+public class ManagePlayersTurnUseCase {
+
+    private int[] _allPlayersIndexArray;
     private int _currentPlayerID;
     private int _currentIndex;
 
@@ -12,12 +12,15 @@ public class ManagePlayersTurnUseCase { //Todo: Implementar o observer pattern e
         _currentIndex++;
         if(_currentIndex >= _allPlayersIndexArray.length){
             _currentIndex = 0;
+            EventManager.RaiseAnEvent("LAST_PLAYER_PLAYED");
         }
 
         _currentPlayerID = _allPlayersIndexArray[_currentIndex];
     }
 
     public ManagePlayersTurnUseCase(int numberOfPlayers) {
+        EventManager.CreateEventIfItDoesNotExists("LAST_PLAYER_PLAYED");
+
         this._allPlayersIndexArray = new int[numberOfPlayers];
 
         for(int i = 0; i < numberOfPlayers; i++){

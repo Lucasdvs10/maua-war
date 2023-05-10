@@ -1,6 +1,8 @@
 package domain.usecase;
 
-public class ManageRoundsUseCase {
+import domain.usecase.eventsystem.IEventListener;
+
+public class ManageRoundsUseCase implements IEventListener {
     private int _currentRound;
 
     //Todo: Aplicar o Observer Pattern para emitir um evento toda vez que mudarmos de Round?
@@ -19,5 +21,10 @@ public class ManageRoundsUseCase {
     public ManageRoundsUseCase(int _currentRound) {
         if(_currentRound > 0)
             this._currentRound = _currentRound;
+    }
+
+    @Override
+    public void OnEventRaised() {
+        GoToNextRound();
     }
 }
