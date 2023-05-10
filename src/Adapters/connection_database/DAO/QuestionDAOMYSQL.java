@@ -89,21 +89,7 @@ public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
         Random random = new Random();
         int randomId = random.nextInt(num_for_random);
 
-        //pegando o ID aleatório
-        String sql_string_two = "SELECT question FROM questions WHERE id =" + randomId;
-        try {
-            MauaWarStatement = MauawarDatabaseConnection.get_connection_database_mauawar().createStatement();
-            MauaWarStatement.executeQuery(sql_string_two);
-            ResultSet mauaWarResultSet = MauaWarStatement.getResultSet();
-
-            String question = mauaWarResultSet.getString("question");
-            return question;
-
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            return null;
-        }
+        return GetQuestionById(randomId);
 
 
     }
