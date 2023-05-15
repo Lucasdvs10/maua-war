@@ -12,6 +12,11 @@ public class ManageRoundsUseCase implements IEventListener {
         return this._currentRound;
     }
 
+    @Override
+    public void OnEventRaised() {
+        GoToNextRound();
+    }
+
     public int get_currentRound() {
         return _currentRound;
     }
@@ -20,6 +25,11 @@ public class ManageRoundsUseCase implements IEventListener {
         this._currentRound = 0;
         EventManager.CreateEventIfItDoesNotExists("NEXT_ROUND");
     }
+    public ManageRoundsUseCase(String eventToSubscribe){
+        this._currentRound = 0;
+        EventManager.CreateEventIfItDoesNotExists("NEXT_ROUND");
+        EventManager.SubscribeInEvent(eventToSubscribe, this);
+    }
     public ManageRoundsUseCase(int _currentRound) {
         EventManager.CreateEventIfItDoesNotExists("NEXT_ROUND");
 
@@ -27,8 +37,4 @@ public class ManageRoundsUseCase implements IEventListener {
             this._currentRound = _currentRound;
     }
 
-    @Override
-    public void OnEventRaised() {
-        GoToNextRound();
-    }
 }
