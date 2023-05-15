@@ -1,4 +1,4 @@
-package domain.usecase.eventsystem;
+package domain.entities.eventsystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;

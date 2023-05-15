@@ -1,6 +1,6 @@
 package domain.usecase;
 
-import domain.usecase.eventsystem.EventManager;
+import domain.entities.eventsystem.EventManager;
 
 public class ManagePlayersTurnUseCase {
 

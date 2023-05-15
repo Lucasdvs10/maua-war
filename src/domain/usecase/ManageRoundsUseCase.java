@@ -1,7 +1,7 @@
 package domain.usecase;
 
-import domain.usecase.eventsystem.EventManager;
-import domain.usecase.eventsystem.IEventListener;
+import domain.entities.eventsystem.EventManager;
+import domain.entities.eventsystem.IEventListener;
 
 public class ManageRoundsUseCase implements IEventListener {
     private int _currentRound;

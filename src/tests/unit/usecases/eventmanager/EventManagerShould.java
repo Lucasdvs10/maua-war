@@ -1,6 +1,6 @@
 package tests.unit.usecases.eventmanager;
 
-import domain.usecase.eventsystem.EventManager;
+import domain.entities.eventsystem.EventManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

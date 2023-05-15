@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManagePlayersTurnUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManagePlayersTurnUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/eventsystem/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/eventsystem/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/eventsystem/IEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/eventsystem/IEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventListenerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventListenerMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventManagerShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventManagerShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +170,7 @@
       <workItem from="1683320553318" duration="1880000" />
       <workItem from="1683588526791" duration="2957000" />
       <workItem from="1683659115686" duration="2959000" />
+      <workItem from="1684187485839" duration="1769000" />
     </task>
     <servers />
   </component>
