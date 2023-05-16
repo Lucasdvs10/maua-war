@@ -1,4 +1,4 @@
-package tests.unit.usecases.eventmanager;
+package tests.unit.entities.eventmanager;
 
 import domain.entities.eventsystem.IEventListener;
 

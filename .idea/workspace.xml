@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/eventsystem/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/eventsystem/EventManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManagePlayersTurnUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManagePlayersTurnUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usecase/eventsystem/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/eventsystem/EventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usecase/eventsystem/IEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/eventsystem/IEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventListenerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventListenerMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventManagerShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventManagerShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventListenerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/entities/eventmanager/EventListenerMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/eventmanager/EventManagerShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/entities/eventmanager/EventManagerShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,28 +39,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ToolWindowCoverage.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/21.00306-8/Desktop/maua-war&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowCoverage.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/21.00306-8/Desktop/maua-war",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="domain.usecase.eventsystem" />
@@ -71,64 +71,65 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.tests.unit in maua-war">
-    <configuration name="EventManagerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventManagerShould.Remove_Mock1_From_HashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
+          <option name="PATTERN" value="tests.unit.entities.eventmanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventManagerShould.Add_Mock_Listeners_To_List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="METHOD_NAME" value="Add_Mock_Listeners_To_List" />
+      <option name="PACKAGE_NAME" value="tests.unit.entities.eventmanager" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.entities.eventmanager.EventManagerShould" />
+      <option name="METHOD_NAME" value="Remove_Mock1_From_HashMap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventManagerShould.Not_Create_An_Event_If_It_Already_Exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventManagerShould.Turn_Player_Mock1_Flag_On" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
+          <option name="PATTERN" value="tests.unit.entities.eventmanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="METHOD_NAME" value="Not_Create_An_Event_If_It_Already_Exists" />
+      <option name="PACKAGE_NAME" value="tests.unit.entities.eventmanager" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.entities.eventmanager.EventManagerShould" />
+      <option name="METHOD_NAME" value="Turn_Player_Mock1_Flag_On" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventManagerShould.Turn_Only_Mock2_Flag_To_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OBJAnswerAnAmountOfQuestionsShould.Add_One_Point_To_Player1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
+          <option name="PATTERN" value="tests.unit.usecases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="METHOD_NAME" value="Turn_Only_Mock2_Flag_To_True" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.OBJAnswerAnAmountOfQuestionsShould" />
+      <option name="METHOD_NAME" value="Add_One_Point_To_Player1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OBJAnswerAnAmountOfQuestionsShould.Raise_PL_Completed_Obj_Event" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.usecases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit.usecases" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.OBJAnswerAnAmountOfQuestionsShould" />
+      <option name="METHOD_NAME" value="Raise_PL_Completed_Obj_Event" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,10 +152,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.tests.unit in maua-war" />
-        <item itemvalue="JUnit.EventManagerShould.Turn_Only_Mock2_Flag_To_True" />
-        <item itemvalue="JUnit.EventManagerShould" />
-        <item itemvalue="JUnit.EventManagerShould.Add_Mock_Listeners_To_List" />
-        <item itemvalue="JUnit.EventManagerShould.Not_Create_An_Event_If_It_Already_Exists" />
+        <item itemvalue="JUnit.OBJAnswerAnAmountOfQuestionsShould.Raise_PL_Completed_Obj_Event" />
+        <item itemvalue="JUnit.OBJAnswerAnAmountOfQuestionsShould.Add_One_Point_To_Player1" />
+        <item itemvalue="JUnit.EventManagerShould.Remove_Mock1_From_HashMap" />
+        <item itemvalue="JUnit.EventManagerShould.Turn_Player_Mock1_Flag_On" />
       </list>
     </recent_temporary>
   </component>
@@ -171,11 +172,23 @@
       <workItem from="1683588526791" duration="2957000" />
       <workItem from="1683659115686" duration="2959000" />
       <workItem from="1684187485839" duration="1769000" />
+      <workItem from="1684235214985" duration="5004000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
