@@ -1,5 +1,6 @@
 package Adapters;
 
+
 import domain.entities.Question;
 
 public interface IQuestionDAO {
