@@ -2,19 +2,20 @@ package tests.unit.usecases;
 
 import Adapters.mock.QuestionDAOMock;
 import domain.entities.Question;
-import domain.usecase.PullQuestionsUseCase;
+import domain.entities.eventsystem.EventManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import tests.unit.entities.eventmanager.EventListenerMock;
 
-public class ManageQuestionUseCaseShould {
+public class PullQuestionsUseCase {
     QuestionDAOMock daoMock;
-    PullQuestionsUseCase useCase;
+    domain.usecase.PullQuestionsUseCase useCase;
 
     @BeforeEach
     public void SetupTests(){
         daoMock = new QuestionDAOMock();
-        useCase = new PullQuestionsUseCase(daoMock);
+        useCase = new domain.usecase.PullQuestionsUseCase(daoMock);
     }
 
     @Test
@@ -39,12 +40,16 @@ public class ManageQuestionUseCaseShould {
     }
 
     @Test
-    public void Set_List_Size_To_0(){
+    public void Raise_An_Event_When_AnsweredList_Is_Full(){
+        EventListenerMock listenerMock = new EventListenerMock();
+        EventManager.SubscribeInEvent("THERE_IS_NO_MORE_QUESTIONS", listenerMock);
+
         useCase.AddQuestionToAnsweredList(daoMock.get_questionsDBMock().get(0));
         useCase.AddQuestionToAnsweredList(daoMock.get_questionsDBMock().get(1));
 
         Question questionReturn = useCase.GetNotAnsweredRandomQuestion();
 
-        Assertions.assertEquals(0, useCase.get_answeredQuestionsList().size());
+
+        Assertions.assertTrue(listenerMock.hasBeenCalledFlag);
     }
 }
