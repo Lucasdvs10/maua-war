@@ -8,4 +8,6 @@ public interface IQuestionDAO {
     Question GetQuestionById(int questionId);
 
     Question GetRandomQuestion();
+
+    int GetDataBaseSize();
 }

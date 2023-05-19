@@ -34,9 +34,14 @@ public class QuestionDAOMock implements Adapters.IQuestionDAO{
     public Question GetRandomQuestion() {
         Random random = new Random();
 
-        int randomIndex = random.nextInt(0, this._questionsDBMock.size());
+        int randomIndex = random.nextInt(0, this._questionsDBMock.size()+1);
 
         return GetQuestionById(randomIndex);
+    }
+
+    @Override
+    public int GetDataBaseSize() {
+        return _questionsDBMock.size();
     }
 
     public ArrayList<Question> get_questionsDBMock() {

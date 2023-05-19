@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/IQuestionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/IQuestionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/connection_database/DAO/QuestionDAOMYSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/connection_database/DAO/QuestionDAOMYSQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,65 +68,66 @@
       <recent name="Adapters.connection_database" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.tests.unit in maua-war">
-    <configuration name="EventManagerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManageQuestionUseCaseShould.Set_List_Size_To_1">
+    <configuration name="ManageQuestionUseCaseShould.Add_Question_To_List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
+          <option name="PATTERN" value="tests.unit.usecases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventManagerShould.Add_Mock_Listeners_To_List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="METHOD_NAME" value="Add_Mock_Listeners_To_List" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.ManageQuestionUseCaseShould" />
+      <option name="METHOD_NAME" value="Add_Question_To_List" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventManagerShould.Not_Create_An_Event_If_It_Already_Exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageQuestionUseCaseShould.Return_Question_With_Id_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
+          <option name="PATTERN" value="tests.unit.usecases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="METHOD_NAME" value="Not_Create_An_Event_If_It_Already_Exists" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.ManageQuestionUseCaseShould" />
+      <option name="METHOD_NAME" value="Return_Question_With_Id_2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventManagerShould.Turn_Only_Mock2_Flag_To_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageQuestionUseCaseShould.Set_List_Size_To_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.eventmanager.*" />
+          <option name="PATTERN" value="tests.unit.usecases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases.eventmanager" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.eventmanager.EventManagerShould" />
-      <option name="METHOD_NAME" value="Turn_Only_Mock2_Flag_To_True" />
+      <option name="PACKAGE_NAME" value="tests.unit.usecases" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.ManageQuestionUseCaseShould" />
+      <option name="METHOD_NAME" value="Set_List_Size_To_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionEntityShould.Both_Questions_Should_be_equals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit.entities" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.entities.QuestionEntityShould" />
+      <option name="METHOD_NAME" value="Both_Questions_Should_be_equals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManageQuestionUseCaseShould.Set_List_Size_To_1" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
-        <item itemvalue="JUnit.EventManagerShould.Turn_Only_Mock2_Flag_To_True" />
-        <item itemvalue="JUnit.EventManagerShould" />
-        <item itemvalue="JUnit.EventManagerShould.Add_Mock_Listeners_To_List" />
-        <item itemvalue="JUnit.EventManagerShould.Not_Create_An_Event_If_It_Already_Exists" />
+        <item itemvalue="JUnit.ManageQuestionUseCaseShould.Return_Question_With_Id_2" />
+        <item itemvalue="JUnit.ManageQuestionUseCaseShould.Add_Question_To_List" />
+        <item itemvalue="JUnit.QuestionEntityShould.Both_Questions_Should_be_equals" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +169,7 @@
       <workItem from="1683320553318" duration="1880000" />
       <workItem from="1683588526791" duration="2957000" />
       <workItem from="1683659115686" duration="2959000" />
+      <workItem from="1684498343006" duration="2386000" />
     </task>
     <servers />
   </component>

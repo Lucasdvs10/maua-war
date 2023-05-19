@@ -93,4 +93,9 @@ public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
 
 
     }
+
+    @Override
+    public int GetDataBaseSize() { //Todo: Implementar este método
+        return 0;
+    }
 }
