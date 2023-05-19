@@ -1,15 +1,22 @@
-package tests.unit.usecases.eventmanager;
+package tests.unit.entities.eventmanager;
 
-import domain.usecase.eventsystem.EventManager;
+import domain.entities.Player;
+import domain.entities.eventsystem.EventManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
 import java.util.HashMap;
 
 public class EventManagerShould {
     EventListenerMock listenerMock;
     EventListenerMock listenerMock2;
+
+    PlayerEventListenerMock playerEventListenerMock1;
+    PlayerEventListenerMock playerEventListenerMock2;
+
+    Player playerMock;
 
     @BeforeEach
     public void SetupTests(){
@@ -18,6 +25,13 @@ public class EventManagerShould {
         listenerMock2  = new EventListenerMock();
 
         EventManager.AllEventsMap = new HashMap<>();
+
+
+        playerEventListenerMock1 = new PlayerEventListenerMock();
+        playerEventListenerMock2 = new PlayerEventListenerMock();
+        playerMock = new Player(1, Color.BLUE);
+
+        EventManager.AllPlayerEventsMap = new HashMap<>();
     }
 
     @Test
@@ -86,4 +100,41 @@ public class EventManagerShould {
         Assertions.assertFalse(listenerMock.hasBeenCalledFlag);
         Assertions.assertTrue(listenerMock2.hasBeenCalledFlag);
     }
+
+    @Test
+    public void Create_Player_Event(){
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_UM_EVENTO_QUE_AINDA_NAO_EXISTE");
+
+        Assertions.assertTrue(EventManager.AllPlayerEventsMap.containsKey("PL_UM_EVENTO_QUE_AINDA_NAO_EXISTE"));
+    }
+
+    @Test
+    public void Create_Player_Event_Only_Once(){
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_UM_EVENTO_QUE_AINDA_NAO_EXISTE");
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_UM_EVENTO_QUE_AINDA_NAO_EXISTE");
+
+        Assertions.assertEquals(1, EventManager.AllPlayerEventsMap.size());
+    }
+
+    @Test
+    public void Turn_Player_Mock1_Flag_On(){
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_Teste");
+
+        EventManager.SubscribeInPlayerEvent("PL_Teste", playerEventListenerMock1);
+        EventManager.RaiseAnPlayerEvent("PL_Teste", playerMock);
+
+        Assertions.assertTrue(playerEventListenerMock1.hasBeenCalledFlag);
+        Assertions.assertSame(playerMock ,playerEventListenerMock1.player);
+    }
+
+    @Test
+    public void Remove_Mock1_From_HashMap(){
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_Teste");
+
+        EventManager.SubscribeInPlayerEvent("PL_Teste", playerEventListenerMock1);
+        EventManager.UnsubscribeInPlayerEvent("PL_Teste", playerEventListenerMock1);
+
+        Assertions.assertEquals(0,EventManager.AllPlayerEventsMap.get("PL_Teste").size());
+    }
+
 }

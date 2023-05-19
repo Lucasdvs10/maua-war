@@ -1,6 +1,6 @@
 package domain.usecase;
 
-import domain.usecase.eventsystem.EventManager;
+import domain.entities.eventsystem.EventManager;
 
 public class ManagePlayersTurnUseCase {
 
@@ -12,14 +12,14 @@ public class ManagePlayersTurnUseCase {
         _currentIndex++;
         if(_currentIndex >= _allPlayersIndexArray.length){
             _currentIndex = 0;
-            EventManager.RaiseAnEvent("LAST_PLAYER_PLAYED");
+            EventManager.RaiseAnEvent("EV_LAST_PLAYER_PLAYED");
         }
 
         _currentPlayerID = _allPlayersIndexArray[_currentIndex];
     }
 
     public ManagePlayersTurnUseCase(int numberOfPlayers) {
-        EventManager.CreateEventIfItDoesNotExists("LAST_PLAYER_PLAYED");
+        EventManager.CreateEventIfItDoesNotExists("EV_LAST_PLAYER_PLAYED");
 
         this._allPlayersIndexArray = new int[numberOfPlayers];
 

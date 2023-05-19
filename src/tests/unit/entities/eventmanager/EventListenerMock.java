@@ -1,6 +1,6 @@
-package tests.unit.usecases.eventmanager;
+package tests.unit.entities.eventmanager;
 
-import domain.usecase.eventsystem.IEventListener;
+import domain.entities.eventsystem.IEventListener;
 
 public class EventListenerMock implements IEventListener {
     public boolean hasBeenCalledFlag = false;

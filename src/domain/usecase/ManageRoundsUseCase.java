@@ -1,14 +1,14 @@
 package domain.usecase;
 
-import domain.usecase.eventsystem.EventManager;
-import domain.usecase.eventsystem.IEventListener;
+import domain.entities.eventsystem.EventManager;
+import domain.entities.eventsystem.IEventListener;
 
 public class ManageRoundsUseCase implements IEventListener {
     private int _currentRound;
 
     public int GoToNextRound(){
         this._currentRound++;
-        EventManager.RaiseAnEvent("NEXT_ROUND");
+        EventManager.RaiseAnEvent("EV_NEXT_ROUND");
         return this._currentRound;
     }
 
@@ -23,15 +23,15 @@ public class ManageRoundsUseCase implements IEventListener {
 
     public ManageRoundsUseCase(){
         this._currentRound = 0;
-        EventManager.CreateEventIfItDoesNotExists("NEXT_ROUND");
+        EventManager.CreateEventIfItDoesNotExists("EV_NEXT_ROUND");
     }
     public ManageRoundsUseCase(String eventToSubscribe){
         this._currentRound = 0;
-        EventManager.CreateEventIfItDoesNotExists("NEXT_ROUND");
+        EventManager.CreateEventIfItDoesNotExists("EV_NEXT_ROUND");
         EventManager.SubscribeInEvent(eventToSubscribe, this);
     }
     public ManageRoundsUseCase(int _currentRound) {
-        EventManager.CreateEventIfItDoesNotExists("NEXT_ROUND");
+        EventManager.CreateEventIfItDoesNotExists("EV_NEXT_ROUND");
 
         if(_currentRound > 0)
             this._currentRound = _currentRound;
