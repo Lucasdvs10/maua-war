@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tests.unit.entities.eventmanager.EventListenerMock;
 
-public class PullQuestionsUseCase {
+public class PullQuestionsUseCaseShould {
     QuestionDAOMock daoMock;
     domain.usecase.PullQuestionsUseCase useCase;
 
@@ -48,7 +48,6 @@ public class PullQuestionsUseCase {
         useCase.AddQuestionToAnsweredList(daoMock.get_questionsDBMock().get(1));
 
         Question questionReturn = useCase.GetNotAnsweredRandomQuestion();
-
 
         Assertions.assertTrue(listenerMock.hasBeenCalledFlag);
     }

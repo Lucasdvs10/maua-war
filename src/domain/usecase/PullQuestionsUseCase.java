@@ -1,5 +1,6 @@
 package domain.usecase;
 
+import Adapters.DependencyInjector;
 import Adapters.IQuestionDAO;
 import domain.entities.Question;
 import domain.entities.eventsystem.EventManager;
@@ -35,13 +36,10 @@ public class PullQuestionsUseCase {
         _answeredQuestionsList.add(question);
     }
 
-    public PullQuestionsUseCase() {
+
+    public PullQuestionsUseCase(IQuestionDAO questionDAO) {
         EventManager.CreateEventIfItDoesNotExists("THERE_IS_NO_MORE_QUESTIONS");
-        _answeredQuestionsList = new ArrayList<>();
-    }
-    public PullQuestionsUseCase(IQuestionDAO _questionDao) {
-        EventManager.CreateEventIfItDoesNotExists("THERE_IS_NO_MORE_QUESTIONS");
-        this._questionDao = _questionDao;
+        this._questionDao = questionDAO;
         _answeredQuestionsList = new ArrayList<>();
     }
 

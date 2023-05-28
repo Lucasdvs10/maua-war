@@ -46,7 +46,7 @@ public class telainicial extends javax.swing.JDialog {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        TelaCadastrarPerguntas jcadastro = new TelaCadastrarPerguntas();
+        RegisterQuestionsScreen jcadastro = new RegisterQuestionsScreen();
         jcadastro.show();
         
         dispose();
