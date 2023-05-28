@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/PrototipoPI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/TelaCadastrarPerguntas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/cadastro_perguntas.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RegisterQuestion.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/question_screen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionPopUP.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/telainicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/telainicial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/PullQuestionsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/usecases/PullQuestionsUseCaseShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/TelaCadastrarPerguntas.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,7 @@
       <recent name="Adapters.connection_database" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.tests.unit in maua-war">
+  <component name="RunManager" selected="Application.telainicial">
     <configuration name="RegisterQuestionsScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UI.RegisterQuestionsScreen" />
       <module name="maua-war" />
@@ -93,18 +87,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DependencyInjectorShould.Return_Same_DAO_MYSQL_Instance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="telainicial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.telainicial" />
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.adapters.*" />
+          <option name="PATTERN" value="UI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.DependencyInjectorShould" />
-      <option name="METHOD_NAME" value="Return_Same_DAO_MYSQL_Instance" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.telainicial" />
+        <item itemvalue="Application.RegisterQuestionsScreen" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
         <item itemvalue="JUnit.DependencyInjectorShould.Return_Same_DAO_Mock_Instance" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould" />
-        <item itemvalue="JUnit.DependencyInjectorShould.Return_Same_DAO_MYSQL_Instance" />
-        <item itemvalue="Application.RegisterQuestionsScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +169,7 @@
       <workItem from="1683659115686" duration="2959000" />
       <workItem from="1684498343006" duration="2386000" />
       <workItem from="1685123093456" duration="6650000" />
-      <workItem from="1685279592375" duration="2101000" />
+      <workItem from="1685279592375" duration="6183000" />
     </task>
     <servers />
   </component>

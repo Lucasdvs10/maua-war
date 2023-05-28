@@ -1,12 +1,19 @@
 package UI;
 
+import Adapters.DependencyInjector;
 import Adapters.IQuestionDAO;
+import domain.entities.Question;
 
-public class TelaCadastrarPerguntas extends javax.swing.JDialog {
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Random;
 
+public class RegisterQuestionsScreen extends javax.swing.JDialog {
     IQuestionDAO _questionDAO;
-
-    public TelaCadastrarPerguntas() {
+    public RegisterQuestionsScreen() {
+        _questionDAO = DependencyInjector.GetQuestionDAO();
         initComponents();
     }
 
@@ -20,16 +27,17 @@ public class TelaCadastrarPerguntas extends javax.swing.JDialog {
         fourthAnswer = new javax.swing.JTextField();
         submitButton = new javax.swing.JButton();
 
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitButtonPressedEvent(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         statement.setText("Digite a pergunta");
 
         correctAnswer.setText("Digite a resposta correta:");
-        correctAnswer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
 
         thirdAnswer.setText("Digite a terceira resposta");
 
@@ -79,8 +87,49 @@ public class TelaCadastrarPerguntas extends javax.swing.JDialog {
         pack();
     }
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void SubmitButtonPressedEvent(java.awt.event.ActionEvent evt) {
+        HashMap<JTextField, Character> textFieldCharacterHashMap = new HashMap<>();
+        Random rn = new Random();
+
+
+        //Embaralhando a ordem das alternativas
+        textFieldCharacterHashMap.put(correctAnswer, GetRandomCharacter(rn));
+        textFieldCharacterHashMap.put(secondAnswer, GetRandomCharacter(rn));
+        textFieldCharacterHashMap.put(thirdAnswer, GetRandomCharacter(rn));
+        textFieldCharacterHashMap.put(fourthAnswer, GetRandomCharacter(rn));
+
+
+        //Instanciando a question que enviaremos para o banco de dados
+        Question question = new Question(statement.getText(), textFieldCharacterHashMap.get(correctAnswer), _questionDAO.GetDataBaseSize() + 1);
+        question.AddAlternativeToHashMap(textFieldCharacterHashMap.get(correctAnswer), correctAnswer.getText());
+        question.AddAlternativeToHashMap(textFieldCharacterHashMap.get(secondAnswer), secondAnswer.getText());
+        question.AddAlternativeToHashMap(textFieldCharacterHashMap.get(thirdAnswer), thirdAnswer.getText());
+        question.AddAlternativeToHashMap(textFieldCharacterHashMap.get(fourthAnswer), fourthAnswer.getText());
+
+
+        //Enviando para o banco de dados
+        _questionDAO.RegisterQuestion(question);
+
+
+        //Printando no console para fins de teste
+        Question questionReturned = _questionDAO.GetQuestionById(_questionDAO.GetDataBaseSize());
+        System.out.println("Pergunta enviada ao banco de dados!");
+        System.out.println(questionReturned.get_statement());
+        System.out.println(questionReturned.get_alternativesHashMap().get(questionReturned.get_correctAlternative()));
+
+
+        //Resetando a lista para poder adicionar mais itens
+        charactersList = new ArrayList<>(Arrays.asList('A', 'B', 'C', 'D'));
     }
+
+    private Character GetRandomCharacter(Random rn) {
+        int randomIndex = rn.nextInt(0, charactersList.size());
+        char randomChar = charactersList.get(randomIndex);
+        charactersList.remove(randomIndex);
+
+        return randomChar;
+    }
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -90,17 +139,17 @@ public class TelaCadastrarPerguntas extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastrarPerguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterQuestionsScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastrarPerguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterQuestionsScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastrarPerguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterQuestionsScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastrarPerguntas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterQuestionsScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                TelaCadastrarPerguntas dialog = new TelaCadastrarPerguntas();
+                RegisterQuestionsScreen dialog = new RegisterQuestionsScreen();
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -118,4 +167,5 @@ public class TelaCadastrarPerguntas extends javax.swing.JDialog {
     private javax.swing.JTextField thirdAnswer;
     private javax.swing.JTextField secondAnswer;
     private javax.swing.JTextField fourthAnswer;
+    ArrayList<Character> charactersList = new ArrayList<>(Arrays.asList('A', 'B', 'C', 'D'));
 }
