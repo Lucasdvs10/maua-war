@@ -1,7 +1,30 @@
 package UI;
 
+import Adapters.DependencyInjector;
+import Adapters.IQuestionDAO;
+import domain.entities.Player;
+import domain.usecase.ManagePlayersTurnUseCase;
+import domain.usecase.ManageRoundsUseCase;
+
+import java.awt.*;
+
 public class GameScreen extends javax.swing.JFrame {
+    IQuestionDAO questionDAO;
+    Player[] _allPlayersArray = new Player[]{
+            new Player(0, Color.BLUE),
+            new Player(1, Color.RED),
+            new Player(2, Color.GREEN),
+            new Player(3, Color.yellow)
+    };
+
+    ManagePlayersTurnUseCase managePlayersTurnUseCase;
+    ManageRoundsUseCase manageRoundsUseCase;
+
     public GameScreen() {
+        questionDAO = DependencyInjector.GetQuestionDAO();
+        managePlayersTurnUseCase = new ManagePlayersTurnUseCase(2);
+        manageRoundsUseCase = new ManageRoundsUseCase();
+
         initComponents();
     }
 
@@ -203,7 +226,7 @@ public class GameScreen extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 520, -1, -1));
 
-        jTextField7.setText("Domine o bloco S e o Ginásio");
+        jTextField7.setText("Domine 4 blocos");
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
@@ -211,7 +234,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 600, 190, -1));
 
-        jTextField8.setText("Domine o bloco R e o bloco E");
+        jTextField8.setText("Responda 30 perguntas");
         getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 640, 190, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\lucas\\Desktop\\Projetos atuais\\maua-war\\src\\UI\\Images\\tabuleiro.png")); // NOI18N
@@ -223,75 +246,75 @@ public class GameScreen extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
         
     }
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
         
     }
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen();
+        QuestionScreen jquestion = new QuestionScreen(questionDAO, _allPlayersArray[managePlayersTurnUseCase.get_currentPlayerID()]);
         jquestion.show(); //mostra a questão
     }
 

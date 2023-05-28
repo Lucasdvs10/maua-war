@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/TelaCadastrarPerguntas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManagePlayersTurnUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManagePlayersTurnUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/objectivesystem/ObjectivesContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/objectivesystem/ObjectivesContainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +67,7 @@
       <recent name="C:\Users\lucas\Desktop\Projetos atuais\maua-war\src\UI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas\Desktop\Projetos atuais\maua-war\src\domain\usecase" />
       <recent name="C:\Users\lucas\Desktop\Projetos atuais\maua-war\src\UI" />
       <recent name="C:\Users\lucas\Desktop\Projetos atuais\maua-war\src" />
     </key>
@@ -73,7 +78,33 @@
       <recent name="Adapters.connection_database" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.telainicial">
+  <component name="RunManager" selected="Application.GameScreen">
+    <configuration name="GameScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.GameScreen" />
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.QuestionScreen" />
+      <module name="maua-war" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegisterQuestionsScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UI.RegisterQuestionsScreen" />
       <module name="maua-war" />
@@ -100,37 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DependencyInjectorShould.Return_Same_DAO_Mock_Instance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.adapters.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.adapters" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.adapters.DependencyInjectorShould" />
-      <option name="METHOD_NAME" value="Return_Same_DAO_Mock_Instance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PullQuestionsUseCaseShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maua-war" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.unit.usecases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.usecases" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.usecases.PullQuestionsUseCaseShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="tests.unit in maua-war" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maua-war" />
       <extension name="coverage">
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameScreen" />
         <item itemvalue="Application.telainicial" />
+        <item itemvalue="Application.QuestionScreen" />
         <item itemvalue="Application.RegisterQuestionsScreen" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
-        <item itemvalue="JUnit.DependencyInjectorShould.Return_Same_DAO_Mock_Instance" />
-        <item itemvalue="JUnit.PullQuestionsUseCaseShould" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +169,7 @@
       <workItem from="1683659115686" duration="2959000" />
       <workItem from="1684498343006" duration="2386000" />
       <workItem from="1685123093456" duration="6650000" />
-      <workItem from="1685279592375" duration="6183000" />
+      <workItem from="1685279592375" duration="16901000" />
     </task>
     <servers />
   </component>
