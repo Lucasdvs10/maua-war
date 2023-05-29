@@ -10,7 +10,6 @@ import domain.usecase.ManagePlayersTurnUseCase;
 import domain.usecase.ManageRoundsUseCase;
 
 import java.awt.*;
-import java.util.Arrays;
 
 public class GameScreen extends javax.swing.JFrame {
     /*
@@ -79,7 +78,7 @@ public class GameScreen extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        roundCounterUI = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jTextField7 = new javax.swing.JTextField();
@@ -238,14 +237,14 @@ public class GameScreen extends javax.swing.JFrame {
         jTextField5.setText("Amarelo");
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 430, 100, 50));
 
-        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 72)); // NOI18N
-        jTextField6.setText("30:00");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        roundCounterUI.setFont(new java.awt.Font("Segoe UI", 0, 72)); // NOI18N
+        roundCounterUI.setText("30:00");
+        roundCounterUI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 60, -1, -1));
+        getContentPane().add(roundCounterUI, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 60, -1, -1));
 
         jTextPane1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jTextPane1.setText("Objetivos");
@@ -411,7 +410,7 @@ public class GameScreen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField roundCounterUI;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextPane jTextPane1;

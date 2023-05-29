@@ -7,7 +7,6 @@
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/ManageRoundsUseCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,18 +88,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BlockEntityShould.Get_Name_In_The_Right_Format" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="telainicial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.telainicial" />
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.unit.entities.*" />
+          <option name="PATTERN" value="UI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.unit.entities" />
-      <option name="MAIN_CLASS_NAME" value="tests.unit.entities.BlockEntityShould" />
-      <option name="METHOD_NAME" value="Get_Name_In_The_Right_Format" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameScreen" />
+        <item itemvalue="Application.telainicial" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Return_Question_With_Id_2" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Raise_An_Event_When_AnsweredList_Is_Full" />
-        <item itemvalue="JUnit.BlockEntityShould.Get_Name_In_The_Right_Format" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +175,7 @@
       <workItem from="1685316596172" duration="1904000" />
       <workItem from="1685385616150" duration="3681000" />
       <workItem from="1685389370595" duration="341000" />
-      <workItem from="1685389727837" duration="1060000" />
+      <workItem from="1685389727837" duration="4921000" />
     </task>
     <servers />
   </component>
