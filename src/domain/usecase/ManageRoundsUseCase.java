@@ -9,7 +9,6 @@ public class ManageRoundsUseCase implements IEventListener {
     public int GoToNextRound(){
         this._currentRound++;
         EventManager.RaiseAnEvent("EV_NEXT_ROUND");
-        System.out.println("Mudando de round!");
         return this._currentRound;
     }
 
