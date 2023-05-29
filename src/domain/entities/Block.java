@@ -43,7 +43,7 @@ public class Block {
     }
 
     public String get_blockName() {
-        return _blockName;
+        return String.format("Bloco %s (%d)", _blockName, _currentLife);
     }
 
     public int get_currentLife() {

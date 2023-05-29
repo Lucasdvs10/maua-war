@@ -32,4 +32,15 @@ public class BlockEntityShould {
 
         Assertions.assertEquals(0, myBlock.get_maxLife());
     }
+
+    @Test
+    public void Get_Name_In_The_Right_Format(){
+        Block myBlock = new Block("A", 5);
+
+        Assertions.assertEquals("Bloco A (5)", myBlock.get_blockName());
+
+        myBlock.set_currentLife(2);
+
+        Assertions.assertEquals("Bloco A (2)", myBlock.get_blockName());
+    }
 }

@@ -1,6 +1,5 @@
 package domain.usecase;
 
-import Adapters.DependencyInjector;
 import Adapters.IQuestionDAO;
 import domain.entities.Question;
 import domain.entities.eventsystem.EventManager;

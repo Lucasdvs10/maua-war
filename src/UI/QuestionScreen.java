@@ -1,11 +1,12 @@
 package UI;
 
-import Adapters.DependencyInjector;
 import Adapters.IQuestionDAO;
 import domain.entities.Player;
 import domain.entities.Question;
 import domain.usecase.CheckAnswerUseCase;
 import domain.usecase.PullQuestionsUseCase;
+
+import javax.swing.*;
 
 public class QuestionScreen extends javax.swing.JFrame {
     PullQuestionsUseCase pullQuestionsUseCase;
@@ -147,31 +148,39 @@ public class QuestionScreen extends javax.swing.JFrame {
     }
 
     private void AlternativeAButtonAction(java.awt.event.ActionEvent evt) {
-        checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'A');
+        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'A');
 
         System.out.println("Alternativa A pressionada");
         System.out.println(player.GetPlayerName());
+
+        JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
     }
 
     private void AlternativeBButtonAction(java.awt.event.ActionEvent evt) {
-        checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'B');
+        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'B');
 
         System.out.println("Alternativa B pressionada");
         System.out.println(player.GetPlayerName());
+
+        JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
     }
 
     private void AlternativeCButtonAction(java.awt.event.ActionEvent evt) {
-        checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'C');
+        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'C');
 
         System.out.println("Alternativa C pressionada");
         System.out.println(player.GetPlayerName());
+
+        JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
     }
 
     private void AlternativeDButtonAction(java.awt.event.ActionEvent evt) {
-        checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'D');
+        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'D');
 
         System.out.println("Alternativa D pressionada");
         System.out.println(player.GetPlayerName());
+
+        JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
     }
 
     public static void main(String args[]) {

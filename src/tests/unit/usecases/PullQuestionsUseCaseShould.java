@@ -32,7 +32,10 @@ public class PullQuestionsUseCaseShould {
 
     @Test
     public void Return_Question_With_Id_2(){
-        useCase.AddQuestionToAnsweredList(daoMock.get_questionsDBMock().get(0));
+        for(Question question : daoMock.get_questionsDBMock()){
+            if(question.get_questionId() != 2)
+                useCase.AddQuestionToAnsweredList(question);
+        }
 
         Question questionReturn = useCase.GetNotAnsweredRandomQuestion();
 
@@ -44,8 +47,10 @@ public class PullQuestionsUseCaseShould {
         EventListenerMock listenerMock = new EventListenerMock();
         EventManager.SubscribeInEvent("THERE_IS_NO_MORE_QUESTIONS", listenerMock);
 
-        useCase.AddQuestionToAnsweredList(daoMock.get_questionsDBMock().get(0));
-        useCase.AddQuestionToAnsweredList(daoMock.get_questionsDBMock().get(1));
+
+        for(Question question : daoMock.get_questionsDBMock()){
+            useCase.AddQuestionToAnsweredList(question);
+        }
 
         Question questionReturn = useCase.GetNotAnsweredRandomQuestion();
 

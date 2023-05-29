@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 public class ManageRoundsUseCaseShould {
     @Test
     public void Initialize_Current_Round_As_Zero(){
-        ManageRoundsUseCase manageRoundsUseCase = new ManageRoundsUseCase();
+        ManageRoundsUseCase manageRoundsUseCase = new ManageRoundsUseCase(0);
 
         Assertions.assertEquals(0, manageRoundsUseCase.get_currentRound());
     }
 
     @Test
     public void Set_Current_Round_As_1_When_Call_GoToNextRound(){
-        ManageRoundsUseCase manageRoundsUseCase = new ManageRoundsUseCase();
+        ManageRoundsUseCase manageRoundsUseCase = new ManageRoundsUseCase(0);
 
         manageRoundsUseCase.GoToNextRound();
 
