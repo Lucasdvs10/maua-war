@@ -14,6 +14,7 @@ import domain.usecase.ManageRoundsUseCase;
 import java.awt.*;
 
 public class GameScreen extends javax.swing.JFrame {
+
     IQuestionDAO _questionDAO;
     Player[] _allPlayersArray = new Player[]{
             new Player(1, Color.BLUE),
