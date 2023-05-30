@@ -2,6 +2,7 @@ package UI;
 
 import Adapters.IQuestionDAO;
 import UI.UIEntitites.BlockButton;
+import domain.entities.Block;
 import domain.entities.Player;
 import domain.entities.Question;
 import domain.usecase.CheckAnswerUseCase;
@@ -163,15 +164,20 @@ public class QuestionScreen extends javax.swing.JFrame {
     }
 
     private void ChangeButtonColorAndApplyDamage() {
-        _blockButton.get_blockEntity().ApplyDamage(1);
+        Block blockEntity = _blockButton.get_blockEntity();
+        blockEntity.ApplyDamage(1);
 
-        if(_blockButton.get_blockEntity().get_currentLife() <= 0){
-            _blockButton.get_blockEntity().set_isDominated(true);
-            _blockButton.get_blockEntity().set_playerWhoDominated(_player);
+        if(blockEntity.get_currentLife() <= 0){
+            blockEntity.set_isDominated(true);
+            blockEntity.set_playerWhoDominated(_player);
 
-            if(_blockButton.get_blockEntity().get_playerWhoDominated() != null)
-                _blockButton.setBackground(_blockButton.get_blockEntity().get_playerWhoDominated().get_playerColor());
+            if(blockEntity.get_playerWhoDominated() != null){
+                _blockButton.setBackground(blockEntity.get_playerWhoDominated().get_playerColor());
+                blockEntity.set_maxLife(blockEntity.get_maxLife() + 1);
+                blockEntity.set_currentLife(blockEntity.get_maxLife());
+            }
         }
+        _blockButton.setText(blockEntity.get_blockName());
         dispose();
     }
 

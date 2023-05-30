@@ -92,7 +92,7 @@ public class GameScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        blocoJBtn.setText("Bloco J");
+        blocoJBtn.setText(blocoJBtn.get_blockEntity().get_blockName());
         blocoJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoJActionPerformed(evt);
@@ -100,7 +100,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 200, 110));
 
-        blocoRBtn.setText("Bloco R");
+        blocoRBtn.setText(blocoRBtn.get_blockEntity().get_blockName());
         blocoRBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoRActionPerformed(evt);
@@ -108,7 +108,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoRBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 150, 150));
 
-        ginasioBtn.setText("Ginasio");
+        ginasioBtn.setText(ginasioBtn.get_blockEntity().get_blockName());
         ginasioBtn.setAlignmentX(3.0F);
         ginasioBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         ginasioBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +118,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(ginasioBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 260, 110));
 
-        blocoHBtn.setText("Bloco H");
+        blocoHBtn.setText(blocoHBtn.get_blockEntity().get_blockName());
         blocoHBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoHBtnActionPerformed(evt);
@@ -126,7 +126,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoHBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, 160, 100));
 
-        blocoFBtn.setText("Bloco F");
+        blocoFBtn.setText(blocoFBtn.get_blockEntity().get_blockName());
         blocoFBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoFBtnActionPerformed(evt);
@@ -134,7 +134,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoFBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 200, 120));
 
-        blocoEBtn.setText("Bloco E");
+        blocoEBtn.setText(blocoEBtn.get_blockEntity().get_blockName());
         blocoEBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoEBtnActionPerformed(evt);
@@ -142,7 +142,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoEBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 260, 140));
 
-        blocoSBtn.setText("Bloco S");
+        blocoSBtn.setText(blocoSBtn.get_blockEntity().get_blockName());
         blocoSBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoSBtnActionPerformed(evt);
@@ -150,7 +150,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoSBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 460, 180, 100));
 
-        blocoWBtn.setText("Bloco W");
+        blocoWBtn.setText(blocoWBtn.get_blockEntity().get_blockName());
         blocoWBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoWBtnActionPerformed(evt);
@@ -158,7 +158,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoWBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 110, 200));
 
-        blocoGBtn.setText("Bloco G");
+        blocoGBtn.setText(blocoGBtn.get_blockEntity().get_blockName());
         blocoGBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoGBtnActnPerformed(evt);
@@ -166,7 +166,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoGBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 200, 120));
 
-        blocoVBtn.setText("Bloco V");
+        blocoVBtn.setText(blocoVBtn.get_blockEntity().get_blockName());
         blocoVBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoVBtnActionPerformed(evt);
@@ -174,7 +174,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoVBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 90, 190));
 
-        blocoLBtn.setText("Bloco L");
+        blocoLBtn.setText(blocoLBtn.get_blockEntity().get_blockName());
         blocoLBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoLBtnActionPerformed(evt);
@@ -182,7 +182,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoLBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 200, 110));
 
-        blocoABtn.setText("Bloco A");
+        blocoABtn.setText(blocoABtn.get_blockEntity().get_blockName());
         blocoABtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoABtnActionPerformed(evt);

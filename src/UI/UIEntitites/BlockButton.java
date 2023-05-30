@@ -21,8 +21,6 @@ public class BlockButton extends JButton implements IPlayerEventListener {
     public BlockButton(Block _blockEntity) {
         this._blockEntity = _blockEntity;
 
-//        EventManager.CreatePlayerEventIfItDoesNotExists("PL_ANSWERED_A_QUESTION_CORRECTLY");
-//        EventManager.SubscribeInPlayerEvent("PL_ANSWERED_A_QUESTION_CORRECTLY", this);
     }
 
     @Override
