@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/UIEntitites/BlockButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIEntitites/BlockButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/entities/BlockEntityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/entities/BlockEntityShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <recent name="Adapters.connection_database" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameScreen">
+  <component name="RunManager" selected="JUnit.tests.unit in maua-war">
     <configuration name="GameScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UI.GameScreen" />
       <module name="maua-war" />
@@ -152,8 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameScreen" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
+        <item itemvalue="Application.GameScreen" />
         <item itemvalue="Application.telainicial" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Return_Question_With_Id_2" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Raise_An_Event_When_AnsweredList_Is_Full" />
