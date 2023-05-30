@@ -52,6 +52,7 @@ public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
 
             Question questionToReturn = new Question(mauaWarResultSet.getString("question"), mauaWarResultSet.getString("correct_answer").charAt(0), mauaWarResultSet.getInt("id"));
 
+            System.out.println(questionToReturn);
             return questionToReturn;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -99,3 +100,4 @@ public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
         return 0;
     }
 }
+

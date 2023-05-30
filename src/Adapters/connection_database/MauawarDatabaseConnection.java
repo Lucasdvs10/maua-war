@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class MauawarDatabaseConnection {
 
-    private static final String url = "jdbc:mysql://root:IbN9jYBYJoMJk4ASq0W8@containers-us-west-134.railway.app:7863/railway";
+    private static final String url = "jdbc:mysql://localhost:3306/mauawardb";
     private static final String user = "root";
-    private static final String password = "IbN9jYBYJoMJk4ASq0W8";
+    private static final String password = "MySql";
 
     private static Connection conn;
 

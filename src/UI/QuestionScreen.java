@@ -154,6 +154,7 @@ public class QuestionScreen extends javax.swing.JFrame {
         System.out.println(player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+        dispose();
     }
 
     private void AlternativeBButtonAction(java.awt.event.ActionEvent evt) {
@@ -163,6 +164,7 @@ public class QuestionScreen extends javax.swing.JFrame {
         System.out.println(player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+        dispose();
     }
 
     private void AlternativeCButtonAction(java.awt.event.ActionEvent evt) {
@@ -172,6 +174,7 @@ public class QuestionScreen extends javax.swing.JFrame {
         System.out.println(player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+        dispose();
     }
 
     private void AlternativeDButtonAction(java.awt.event.ActionEvent evt) {
@@ -181,6 +184,7 @@ public class QuestionScreen extends javax.swing.JFrame {
         System.out.println(player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+        dispose();
     }
 
     public static void main(String args[]) {
