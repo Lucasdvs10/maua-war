@@ -11,6 +11,9 @@ public class ObjectivesContainer { //Aqui nós vamos instanciar todos os objetiv
         OBJDominateAnAmountOfBlocks objDominateAnAmountOfBlocks = new OBJDominateAnAmountOfBlocks(5, allPlayersArray);
 
 
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_ANSWERED_A_QUESTION_CORRECTLY");
+        EventManager.CreatePlayerEventIfItDoesNotExists("PL_DOMINATED_A_BLOC");
+
         EventManager.SubscribeInPlayerEvent("PL_ANSWERED_A_QUESTION_CORRECTLY", objAnswerAnAmountOfQuestions);
         EventManager.SubscribeInPlayerEvent("PL_DOMINATED_A_BLOC", objDominateAnAmountOfBlocks);
     }

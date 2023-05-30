@@ -10,6 +10,7 @@ import domain.entities.Player;
 import domain.entities.eventsystem.EventManager;
 import domain.usecase.ManagePlayersTurnUseCase;
 import domain.usecase.ManageRoundsUseCase;
+import domain.usecase.objectivesystem.ObjectivesContainer;
 
 import java.awt.*;
 
@@ -30,6 +31,9 @@ public class GameScreen extends javax.swing.JFrame {
 
     int _numberOfPlayers = 2;
 
+    ObjectivesContainer objectivesContainer;
+    Block[] _allBlocksContainer;
+
     public GameScreen() {
         _questionDAO = DependencyInjector.GetQuestionDAO();
         _managePlayersTurnUseCase = new ManagePlayersTurnUseCase(_numberOfPlayers);
@@ -40,6 +44,7 @@ public class GameScreen extends javax.swing.JFrame {
         for (int i = 0; i<_numberOfPlayers; i++){
             _activePlayersArray[i] = _allPlayersArray[i];
         }
+
 
         initComponents();
     }
@@ -76,6 +81,24 @@ public class GameScreen extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+
+        _allBlocksContainer = new Block[]{
+                blocoJBtn.get_blockEntity(),
+                blocoRBtn.get_blockEntity(),
+                blocoRBtn.get_blockEntity(),
+                ginasioBtn.get_blockEntity(),
+                blocoHBtn.get_blockEntity(),
+                blocoFBtn.get_blockEntity(),
+                blocoEBtn.get_blockEntity(),
+                blocoSBtn.get_blockEntity(),
+                blocoWBtn.get_blockEntity(),
+                blocoGBtn.get_blockEntity(),
+                blocoVBtn.get_blockEntity(),
+                blocoLBtn.get_blockEntity(),
+                blocoABtn.get_blockEntity()
+        };
+
+        objectivesContainer = new ObjectivesContainer(_activePlayersArray, _allBlocksContainer);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
