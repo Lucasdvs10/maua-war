@@ -28,7 +28,7 @@ public class GameScreen extends javax.swing.JFrame {
     ManagePlayersTurnUseCase _managePlayersTurnUseCase;
     ManageRoundsUseCase _manageRoundsUseCase;
 
-    int _numberOfPlayers = 4;
+    int _numberOfPlayers = 2;
 
     public GameScreen() {
         _questionDAO = DependencyInjector.GetQuestionDAO();
@@ -70,7 +70,7 @@ public class GameScreen extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        roundCounterUI = new javax.swing.JTextField();
+        roundCounterUI = new RoundCounterDisplay(_manageRoundsUseCase);
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jTextField7 = new javax.swing.JTextField();
@@ -229,8 +229,7 @@ public class GameScreen extends javax.swing.JFrame {
         jTextField5.setText("Amarelo");
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 430, 100, 50));
 
-        roundCounterUI.setFont(new java.awt.Font("Segoe UI", 0, 72)); // NOI18N
-        roundCounterUI.setText("30:00");
+        roundCounterUI.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         roundCounterUI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -402,7 +401,7 @@ public class GameScreen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField roundCounterUI;
+    private RoundCounterDisplay roundCounterUI;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextPane jTextPane1;

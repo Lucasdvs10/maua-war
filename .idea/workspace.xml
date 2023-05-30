@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/entities/BlockEntityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/entities/BlockEntityShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/UIEntitites/RoundCounterDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIEntitites/RoundCounterDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <recent name="Adapters.connection_database" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.tests.unit in maua-war">
+  <component name="RunManager" selected="Application.GameScreen">
     <configuration name="GameScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UI.GameScreen" />
       <module name="maua-war" />
@@ -149,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.tests.unit in maua-war" />
         <item itemvalue="Application.GameScreen" />
+        <item itemvalue="JUnit.tests.unit in maua-war" />
         <item itemvalue="Application.telainicial" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Return_Question_With_Id_2" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Raise_An_Event_When_AnsweredList_Is_Full" />
@@ -176,6 +177,7 @@
       <workItem from="1685385616150" duration="3681000" />
       <workItem from="1685389370595" duration="341000" />
       <workItem from="1685389727837" duration="4921000" />
+      <workItem from="1685479216051" duration="924000" />
     </task>
     <servers />
   </component>
