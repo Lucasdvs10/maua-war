@@ -5,6 +5,7 @@ import UI.UIEntitites.BlockButton;
 import domain.entities.Block;
 import domain.entities.Player;
 import domain.entities.Question;
+import domain.entities.eventsystem.EventManager;
 import domain.usecase.CheckAnswerUseCase;
 import domain.usecase.PullQuestionsUseCase;
 
@@ -171,6 +172,7 @@ public class QuestionScreen extends javax.swing.JFrame {
             blockEntity.set_isDominated(true);
             blockEntity.set_playerWhoDominated(_player);
 
+            EventManager.RaiseAnPlayerEvent("PL_DOMINATED_A_BLOC", _player);
             if(blockEntity.get_playerWhoDominated() != null){
                 _blockButton.setBackground(blockEntity.get_playerWhoDominated().get_playerColor());
                 blockEntity.set_maxLife(blockEntity.get_maxLife() + 1);
