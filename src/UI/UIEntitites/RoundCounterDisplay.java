@@ -1,4 +1,4 @@
-package UI.GameMessages;
+package UI.UIEntitites;
 
 import domain.entities.eventsystem.EventManager;
 import domain.entities.eventsystem.IEventListener;

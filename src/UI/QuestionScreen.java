@@ -1,6 +1,7 @@
 package UI;
 
 import Adapters.IQuestionDAO;
+import UI.UIEntitites.BlockButton;
 import domain.entities.Player;
 import domain.entities.Question;
 import domain.usecase.CheckAnswerUseCase;
@@ -9,16 +10,19 @@ import domain.usecase.PullQuestionsUseCase;
 import javax.swing.*;
 
 public class QuestionScreen extends javax.swing.JFrame {
-    PullQuestionsUseCase pullQuestionsUseCase;
-    Question question;
-    Player player;
-    CheckAnswerUseCase checkAnswerUseCase;
+    PullQuestionsUseCase _pullQuestionsUseCase;
+    Question _question;
+    Player _player;
+    CheckAnswerUseCase _checkAnswerUseCase;
 
-    public QuestionScreen(IQuestionDAO questionDAO, Player player) {
-        this.player = player;
-        pullQuestionsUseCase = new PullQuestionsUseCase(questionDAO);
-        question = pullQuestionsUseCase.GetNotAnsweredRandomQuestion();
-        checkAnswerUseCase = new CheckAnswerUseCase();
+    BlockButton _blockButton;
+
+    public QuestionScreen(IQuestionDAO questionDAO, Player player, BlockButton blockButton) {
+        this._player = player;
+        _pullQuestionsUseCase = new PullQuestionsUseCase(questionDAO);
+        _question = _pullQuestionsUseCase.GetNotAnsweredRandomQuestion();
+        _checkAnswerUseCase = new CheckAnswerUseCase();
+        _blockButton = blockButton;
 
         initComponents();
     }
@@ -79,21 +83,21 @@ public class QuestionScreen extends javax.swing.JFrame {
             }
         });
 
-        alternativeAnswerA.setText(question.get_alternativesHashMap().get('A'));
+        alternativeAnswerA.setText(_question.get_alternativesHashMap().get('A'));
         jScrollPane3.setViewportView(alternativeAnswerA);
 
-        alternativeAnswerB.setText(question.get_alternativesHashMap().get('B'));
+        alternativeAnswerB.setText(_question.get_alternativesHashMap().get('B'));
         jScrollPane4.setViewportView(alternativeAnswerB);
 
-        alternativeAnswerD.setText(question.get_alternativesHashMap().get('D'));
+        alternativeAnswerD.setText(_question.get_alternativesHashMap().get('D'));
         jScrollPane5.setViewportView(alternativeAnswerD);
 
-        alternativeAnswerC.setText(question.get_alternativesHashMap().get('C'));
+        alternativeAnswerC.setText(_question.get_alternativesHashMap().get('C'));
         jScrollPane6.setViewportView(alternativeAnswerC);
 
         questionStatement.setColumns(20);
         questionStatement.setRows(5);
-        questionStatement.setText(question.get_statement());
+        questionStatement.setText(_question.get_statement());
         jScrollPane1.setViewportView(questionStatement);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -148,39 +152,63 @@ public class QuestionScreen extends javax.swing.JFrame {
     }
 
     private void AlternativeAButtonAction(java.awt.event.ActionEvent evt) {
-        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'A');
+        boolean answerIsRight = _checkAnswerUseCase.VerifyPlayerAnswer(_player, _question, 'A');
 
         System.out.println("Alternativa A pressionada");
-        System.out.println(player.GetPlayerName());
+        System.out.println(_player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+        if(answerIsRight)
+            ChangeButtonColorAndApplyDamage();
+    }
+
+    private void ChangeButtonColorAndApplyDamage() {
+        _blockButton.get_blockEntity().ApplyDamage(1);
+
+        if(_blockButton.get_blockEntity().get_currentLife() <= 0){
+            _blockButton.get_blockEntity().set_isDominated(true);
+            _blockButton.get_blockEntity().set_playerWhoDominated(_player);
+
+            if(_blockButton.get_blockEntity().get_playerWhoDominated() != null)
+                _blockButton.setBackground(_blockButton.get_blockEntity().get_playerWhoDominated().get_playerColor());
+        }
     }
 
     private void AlternativeBButtonAction(java.awt.event.ActionEvent evt) {
-        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'B');
+        boolean answerIsRight = _checkAnswerUseCase.VerifyPlayerAnswer(_player, _question, 'B');
 
         System.out.println("Alternativa B pressionada");
-        System.out.println(player.GetPlayerName());
+        System.out.println(_player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+
+        if(answerIsRight)
+            ChangeButtonColorAndApplyDamage();
+
     }
 
     private void AlternativeCButtonAction(java.awt.event.ActionEvent evt) {
-        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'C');
+        boolean answerIsRight = _checkAnswerUseCase.VerifyPlayerAnswer(_player, _question, 'C');
 
         System.out.println("Alternativa C pressionada");
-        System.out.println(player.GetPlayerName());
+        System.out.println(_player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+
+        if(answerIsRight)
+            ChangeButtonColorAndApplyDamage();
     }
 
     private void AlternativeDButtonAction(java.awt.event.ActionEvent evt) {
-        boolean answerIsRight = checkAnswerUseCase.VerifyPlayerAnswer(player, question, 'D');
+        boolean answerIsRight = _checkAnswerUseCase.VerifyPlayerAnswer(_player, _question, 'D');
 
         System.out.println("Alternativa D pressionada");
-        System.out.println(player.GetPlayerName());
+        System.out.println(_player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
+
+        if(answerIsRight)
+            ChangeButtonColorAndApplyDamage();
     }
 
     public static void main(String args[]) {

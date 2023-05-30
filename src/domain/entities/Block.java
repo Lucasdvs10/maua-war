@@ -6,7 +6,12 @@ public class Block {
     private int _maxLife;
 
     private boolean _isDominated;
+    private Player _playerWhoDominated;
 
+    public int ApplyDamage(int damageValue){
+        set_currentLife(_currentLife - damageValue);
+        return _currentLife;
+    }
 
     public Block(String _blockName, int _maxLife) {
         this._blockName = _blockName;
@@ -23,6 +28,14 @@ public class Block {
 
     public void set_blockName(String _blockName) {
         this._blockName = _blockName;
+    }
+
+    public void set_playerWhoDominated(Player player){
+        _playerWhoDominated = player;
+    }
+
+    public Player get_playerWhoDominated() {
+        return _playerWhoDominated;
     }
 
     public void set_currentLife(int _currentLife) {

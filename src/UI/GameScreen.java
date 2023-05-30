@@ -2,8 +2,10 @@ package UI;
 
 import Adapters.DependencyInjector;
 import Adapters.IQuestionDAO;
-import UI.GameMessages.RoundCounterDisplay;
-import UI.GameMessages.WhooseTurnItIsDisplay;
+import UI.UIEntitites.BlockButton;
+import UI.UIEntitites.RoundCounterDisplay;
+import UI.UIEntitites.WhooseTurnItIsDisplay;
+import domain.entities.Block;
 import domain.entities.Player;
 import domain.entities.eventsystem.EventManager;
 import domain.usecase.ManagePlayersTurnUseCase;
@@ -12,17 +14,6 @@ import domain.usecase.ManageRoundsUseCase;
 import java.awt.*;
 
 public class GameScreen extends javax.swing.JFrame {
-    /*
-
-    Ja que vamos instanciar um bloco para cada botão, podemos mostrar a vida apenas dando um getName na instancia do bloco
-    EX: blocoLBtn.setText(blockLInstance.GetName())
-
-    Aí no GetName do bloco a gente coloca "name + (currentLife)"
-    *
-    *
-    *
-    * */
-
     IQuestionDAO _questionDAO;
     Player[] _allPlayersArray = new Player[]{
             new Player(1, Color.BLUE),
@@ -36,7 +27,7 @@ public class GameScreen extends javax.swing.JFrame {
     ManagePlayersTurnUseCase _managePlayersTurnUseCase;
     ManageRoundsUseCase _manageRoundsUseCase;
 
-    int _numberOfPlayers = 2;
+    int _numberOfPlayers = 4;
 
     public GameScreen() {
         _questionDAO = DependencyInjector.GetQuestionDAO();
@@ -61,18 +52,18 @@ public class GameScreen extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        blocoJBtn = new javax.swing.JButton();
-        blocoRBtn = new javax.swing.JButton();
-        ginasioBtn = new javax.swing.JButton();
-        blocoHBtn = new javax.swing.JButton();
-        blocoFBtn = new javax.swing.JButton();
-        blocoEBtn = new javax.swing.JButton();
-        blocoSBtn = new javax.swing.JButton();
-        blocoWBtn = new javax.swing.JButton();
-        blocoGBtn = new javax.swing.JButton();
-        blocoVBtn = new javax.swing.JButton();
-        blocoLBtn = new javax.swing.JButton();
-        blocoABtn = new javax.swing.JButton();
+        blocoJBtn = new BlockButton(new Block("Bloco J", 1));
+        blocoRBtn = new BlockButton(new Block("Bloco R", 1));
+        ginasioBtn = new BlockButton(new Block("Ginasio", 1));
+        blocoHBtn = new BlockButton(new Block("Bloco H", 1));
+        blocoFBtn = new BlockButton(new Block("Bloco F", 1));
+        blocoEBtn = new BlockButton(new Block("Bloco E", 1));
+        blocoSBtn = new BlockButton(new Block("Bloco S", 1));
+        blocoWBtn = new BlockButton(new Block("Bloco W", 1));
+        blocoGBtn = new BlockButton(new Block("Bloco G", 1));
+        blocoVBtn = new BlockButton(new Block("Bloco V", 1));
+        blocoLBtn = new BlockButton(new Block("Bloco L", 1));
+        blocoABtn = new BlockButton(new Block("Bloco A", 1));
         whooseTurnItIsDisplay = new WhooseTurnItIsDisplay();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -103,7 +94,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoJBtn.setText("Bloco J");
         blocoJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                blocoJActionPerformed(evt);
             }
         });
         getContentPane().add(blocoJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 200, 110));
@@ -111,7 +102,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoRBtn.setText("Bloco R");
         blocoRBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                blocoRActionPerformed(evt);
             }
         });
         getContentPane().add(blocoRBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 150, 150));
@@ -121,7 +112,7 @@ public class GameScreen extends javax.swing.JFrame {
         ginasioBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         ginasioBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ginasioBtnActionPerformed(evt);
             }
         });
         getContentPane().add(ginasioBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 260, 110));
@@ -129,7 +120,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoHBtn.setText("Bloco H");
         blocoHBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                blocoHBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoHBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, 160, 100));
@@ -137,7 +128,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoFBtn.setText("Bloco F");
         blocoFBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                blocoFBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoFBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 200, 120));
@@ -145,7 +136,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoEBtn.setText("Bloco E");
         blocoEBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                blocoEBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoEBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 260, 140));
@@ -153,7 +144,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoSBtn.setText("Bloco S");
         blocoSBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                blocoSBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoSBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 460, 180, 100));
@@ -161,7 +152,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoWBtn.setText("Bloco W");
         blocoWBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                blocoWBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoWBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 110, 200));
@@ -169,7 +160,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoGBtn.setText("Bloco G");
         blocoGBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                blocoGBtnActnPerformed(evt);
             }
         });
         getContentPane().add(blocoGBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 200, 120));
@@ -177,7 +168,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoVBtn.setText("Bloco V");
         blocoVBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                blocoVBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoVBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 90, 190));
@@ -185,7 +176,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoLBtn.setText("Bloco L");
         blocoLBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                blocoLBtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoLBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 200, 110));
@@ -193,7 +184,7 @@ public class GameScreen extends javax.swing.JFrame {
         blocoABtn.setText("Bloco A");
         blocoABtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                blocoABtnActionPerformed(evt);
             }
         });
         getContentPane().add(blocoABtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 170, 200, 100));
@@ -270,76 +261,76 @@ public class GameScreen extends javax.swing.JFrame {
         pack();
     }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void blocoJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoJBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void blocoWBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoWBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
-        jquestion.show(); //mostra a questão
-        
-    }
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+    private void ginasioBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), ginasioBtn);
         jquestion.show(); //mostra a questão
         
     }
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void blocoGBtnActnPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoGBtn);
+        jquestion.show(); //mostra a questão
+        
+    }
+
+    private void blocoFBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoFBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void blocoEBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoEBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void blocoABtnActionPerformed(java.awt.event.ActionEvent evt) {
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoABtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void blocoVBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoVBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void blocoHBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoHBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void blocoRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoRBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void blocoLBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoLBtn);
         jquestion.show(); //mostra a questão
     }
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void blocoSBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance());
+        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoSBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -386,18 +377,18 @@ public class GameScreen extends javax.swing.JFrame {
         return _activePlayersArray[_managePlayersTurnUseCase.get_currentPlayerID()-1];
     }
 
-    private javax.swing.JButton blocoJBtn;
-    private javax.swing.JButton blocoVBtn;
-    private javax.swing.JButton blocoLBtn;
-    private javax.swing.JButton blocoABtn;
-    private javax.swing.JButton blocoRBtn;
-    private javax.swing.JButton ginasioBtn;
-    private javax.swing.JButton blocoHBtn;
-    private javax.swing.JButton blocoFBtn;
-    private javax.swing.JButton blocoEBtn;
-    private javax.swing.JButton blocoSBtn;
-    private javax.swing.JButton blocoWBtn;
-    private javax.swing.JButton blocoGBtn;
+    private BlockButton blocoJBtn;
+    private BlockButton blocoVBtn;
+    private BlockButton blocoLBtn;
+    private BlockButton blocoABtn;
+    private BlockButton blocoRBtn;
+    private BlockButton ginasioBtn;
+    private BlockButton blocoHBtn;
+    private BlockButton blocoFBtn;
+    private BlockButton blocoEBtn;
+    private BlockButton blocoSBtn;
+    private BlockButton blocoWBtn;
+    private BlockButton blocoGBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

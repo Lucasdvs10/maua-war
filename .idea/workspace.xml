@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maua-war.iml" beforeDir="false" afterPath="$PROJECT_DIR$/maua-war.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/GameMessages/RoundCounterDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIEntitites/RoundCounterDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/GameMessages/WhooseTurnItIsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIEntitites/WhooseTurnItIsDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/entities/PlayerEntityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/entities/PlayerEntityShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ToolWindowCoverage.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lucas/Desktop/Projetos atuais/maua-war/src/UI&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/21.00306-8/Desktop/PI/maua-war&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -54,7 +61,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -80,7 +87,7 @@
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UI.GameMessages.*" />
+          <option name="PATTERN" value="UI.UIEntitites.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,8 +157,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameScreen" />
-        <item itemvalue="Application.telainicial" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
+        <item itemvalue="Application.telainicial" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Return_Question_With_Id_2" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Raise_An_Event_When_AnsweredList_Is_Full" />
       </list>
