@@ -172,6 +172,7 @@ public class QuestionScreen extends javax.swing.JFrame {
             if(_blockButton.get_blockEntity().get_playerWhoDominated() != null)
                 _blockButton.setBackground(_blockButton.get_blockEntity().get_playerWhoDominated().get_playerColor());
         }
+        dispose();
     }
 
     private void AlternativeBButtonAction(java.awt.event.ActionEvent evt) {
@@ -185,6 +186,7 @@ public class QuestionScreen extends javax.swing.JFrame {
         if(answerIsRight)
             ChangeButtonColorAndApplyDamage();
 
+        dispose();
     }
 
     private void AlternativeCButtonAction(java.awt.event.ActionEvent evt) {
@@ -197,6 +199,7 @@ public class QuestionScreen extends javax.swing.JFrame {
 
         if(answerIsRight)
             ChangeButtonColorAndApplyDamage();
+        dispose();
     }
 
     private void AlternativeDButtonAction(java.awt.event.ActionEvent evt) {
@@ -209,6 +212,7 @@ public class QuestionScreen extends javax.swing.JFrame {
 
         if(answerIsRight)
             ChangeButtonColorAndApplyDamage();
+        dispose();
     }
 
     public static void main(String args[]) {
