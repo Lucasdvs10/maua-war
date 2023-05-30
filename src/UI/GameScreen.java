@@ -17,7 +17,7 @@ public class GameScreen extends javax.swing.JFrame {
     Ja que vamos instanciar um bloco para cada botão, podemos mostrar a vida apenas dando um getName na instancia do bloco
     EX: blocoLBtn.setText(blockLInstance.GetName())
 
-    Aí no GetName do bloco a gente coloca "name + (currentLife)"
+    Aí no GetName do bloco colocamos: "name + (currentLife)"
     *
     *
     *
