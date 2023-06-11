@@ -1,7 +1,6 @@
 package domain.entities;
 
 import java.awt.*;
-import java.util.HashMap;
 
 public class Player {
     private int _playerID;

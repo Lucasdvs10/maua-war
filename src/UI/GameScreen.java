@@ -13,6 +13,7 @@ import domain.usecase.ManageRoundsUseCase;
 import domain.usecase.objectivesystem.ObjectivesContainer;
 
 import java.awt.*;
+import java.util.Random;
 
 public class GameScreen extends javax.swing.JFrame {
 
@@ -33,6 +34,7 @@ public class GameScreen extends javax.swing.JFrame {
 
     ObjectivesContainer objectivesContainer;
     Block[] _allBlocksContainer;
+    BlockButton[] _allBlockButtonsContainer;
 
     public GameScreen() {
         _questionDAO = DependencyInjector.GetQuestionDAO();
@@ -96,6 +98,22 @@ public class GameScreen extends javax.swing.JFrame {
                 blocoVBtn.get_blockEntity(),
                 blocoLBtn.get_blockEntity(),
                 blocoABtn.get_blockEntity()
+        };
+
+        _allBlockButtonsContainer = new BlockButton[]{
+                blocoJBtn,
+                blocoRBtn,
+                blocoRBtn,
+                ginasioBtn,
+                blocoHBtn,
+                blocoFBtn,
+                blocoEBtn,
+                blocoSBtn,
+                blocoWBtn,
+                blocoGBtn,
+                blocoVBtn,
+                blocoLBtn,
+                blocoABtn
         };
 
         objectivesContainer = new ObjectivesContainer(_activePlayersArray, _allBlocksContainer);
@@ -281,7 +299,38 @@ public class GameScreen extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1570, 890));
 
+
+        GiveAllPlayersARandomBlock();
         pack();
+    }
+
+    private void DominateBlock(Player playerDominator, BlockButton blockButton){
+        Block block = blockButton.get_blockEntity();
+        block.set_isDominated(true);
+        block.set_playerWhoDominated(playerDominator);
+
+        blockButton.setBackground(playerDominator.get_playerColor());
+    }
+
+    private BlockButton GetRandomNotDominatedBlockFromArray(){
+        Random random = new Random();
+        BlockButton blockBtnToReturn = null;
+
+        while (blockBtnToReturn == null){
+            int randomIndex = random.nextInt(_allBlocksContainer.length);
+            BlockButton randomBlockBtn = _allBlockButtonsContainer[randomIndex];
+
+            if(!randomBlockBtn.get_blockEntity().get_isDominated()){
+                blockBtnToReturn = randomBlockBtn;
+            }
+        }
+        return blockBtnToReturn;
+    }
+
+    private void GiveAllPlayersARandomBlock(){
+        for (Player player : _activePlayersArray){
+            DominateBlock(player, GetRandomNotDominatedBlockFromArray());
+        }
     }
 
     private void blocoJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
