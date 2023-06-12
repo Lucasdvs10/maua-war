@@ -10,7 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/telainicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/telainicial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +189,7 @@
       <workItem from="1685918697433" duration="823000" />
       <workItem from="1686171189015" duration="14000" />
       <workItem from="1686522146811" duration="6423000" />
-      <workItem from="1686531093335" duration="321000" />
+      <workItem from="1686531093335" duration="3731000" />
     </task>
     <servers />
   </component>
@@ -202,9 +204,9 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI/GameScreen.java</url>
-          <line>429</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/domain/usecase/objectivesystem/OBJDominateAnAmountOfBlocks.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

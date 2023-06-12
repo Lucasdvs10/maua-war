@@ -9,6 +9,8 @@ import UI.UIEntitites.WhooseTurnItIsDisplay;
 import domain.entities.Block;
 import domain.entities.Player;
 import domain.entities.eventsystem.EventManager;
+import domain.entities.eventsystem.IEventListener;
+import domain.entities.eventsystem.IPlayerEventListener;
 import domain.usecase.ManagePlayersTurnUseCase;
 import domain.usecase.ManageRoundsUseCase;
 import domain.usecase.objectivesystem.ObjectivesContainer;
@@ -18,7 +20,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Random;
 
-public class GameScreen extends javax.swing.JFrame {
+public class GameScreen extends javax.swing.JFrame implements IPlayerEventListener {
 
     IQuestionDAO _questionDAO;
     Player[] _allPlayersArray = new Player[]{
@@ -125,7 +127,6 @@ public class GameScreen extends javax.swing.JFrame {
 
         _allBlockButtonsContainer = new BlockButton[]{
                 blocoJBtn,
-                blocoRBtn,
                 blocoRBtn,
                 ginasioBtn,
                 blocoHBtn,
@@ -324,9 +325,24 @@ public class GameScreen extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1570, 890));
 
+        EventManager.SubscribeInPlayerEvent("PL_COMPLETED_OBJ", this);
 
         GiveAllPlayersARandomBlock();
         pack();
+    }
+
+    @Override
+    public void OnPlayerEventRaised(Player player) {
+        JOptionPane.showMessageDialog(null, String.format("Parabéns, %s!\nVocê ganhou!", player.GetPlayerName()));
+
+        EndGame();
+    }
+
+    private void EndGame(){
+
+        telainicial jgame = new telainicial(null, false);
+        jgame.show();
+        dispose();
     }
 
     private void DominateBlock(Player playerDominator, BlockButton blockButton){
@@ -341,9 +357,16 @@ public class GameScreen extends javax.swing.JFrame {
         Random random = new Random();
         BlockButton blockBtnToReturn = null;
 
+        BlockButton initialBlocksPool[] = new BlockButton[]{
+                _allBlockButtonsContainer[1],
+                _allBlockButtonsContainer[2],
+                _allBlockButtonsContainer[5],
+                _allBlockButtonsContainer[6],
+        };
+
         while (blockBtnToReturn == null){
-            int randomIndex = random.nextInt(_allBlocksContainer.length);
-            BlockButton randomBlockBtn = _allBlockButtonsContainer[randomIndex];
+            int randomIndex = random.nextInt(initialBlocksPool.length);
+            BlockButton randomBlockBtn = initialBlocksPool[randomIndex];
 
             if(!randomBlockBtn.get_blockEntity().get_isDominated()){
                 blockBtnToReturn = randomBlockBtn;
@@ -373,6 +396,7 @@ public class GameScreen extends javax.swing.JFrame {
 
         return false;
     }
+
 
     private void blocoJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoJBtn))
@@ -548,4 +572,5 @@ public class GameScreen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextPane jTextPane1;
     RoundCounterDisplay display;
+
 }

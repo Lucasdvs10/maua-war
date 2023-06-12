@@ -68,7 +68,8 @@ public class telainicial extends javax.swing.JDialog {
         int numberOfPlayers = numberOfPlayersDropDown.getSelectedIndex()+2;
         GameScreen jgame = new GameScreen(numberOfPlayers);
         jgame.show();
-        
+//
+//        setVisible(false);
         dispose();
     }
 
