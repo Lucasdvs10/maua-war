@@ -33,7 +33,7 @@ public class GameScreen extends javax.swing.JFrame {
     ManagePlayersTurnUseCase _managePlayersTurnUseCase;
     ManageRoundsUseCase _manageRoundsUseCase;
 
-    int _numberOfPlayers = 2;
+    int _numberOfPlayers;
 
     ObjectivesContainer objectivesContainer;
     Block[] _allBlocksContainer;
@@ -41,7 +41,26 @@ public class GameScreen extends javax.swing.JFrame {
 
     NeighboursMapper _neighboursMapper;
 
+
+
     public GameScreen() {
+        _numberOfPlayers = 2;
+        _questionDAO = DependencyInjector.GetQuestionDAO();
+        _managePlayersTurnUseCase = new ManagePlayersTurnUseCase(_numberOfPlayers);
+        _manageRoundsUseCase = new ManageRoundsUseCase("EV_LAST_PLAYER_PLAYED");
+
+        _activePlayersArray = new Player[_numberOfPlayers];
+
+        for (int i = 0; i<_numberOfPlayers; i++){
+            _activePlayersArray[i] = _allPlayersArray[i];
+        }
+
+
+        initComponents();
+    }
+
+    public GameScreen(int numberOfPlayers) {
+        _numberOfPlayers = numberOfPlayers;
         _questionDAO = DependencyInjector.GetQuestionDAO();
         _managePlayersTurnUseCase = new ManagePlayersTurnUseCase(_numberOfPlayers);
         _manageRoundsUseCase = new ManageRoundsUseCase("EV_LAST_PLAYER_PLAYED");
