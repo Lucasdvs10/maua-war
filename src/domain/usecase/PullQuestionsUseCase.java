@@ -1,6 +1,6 @@
 package domain.usecase;
 
-import Adapters.IQuestionDAO;
+import Model.IQuestionDAO;
 import domain.entities.Question;
 import domain.entities.eventsystem.EventManager;
 

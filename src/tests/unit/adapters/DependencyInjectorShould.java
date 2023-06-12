@@ -1,8 +1,8 @@
 package tests.unit.adapters;
 
-import Adapters.DependencyInjector;
-import Adapters.IQuestionDAO;
-import Adapters.mock.QuestionDAOMock;
+import Model.DependencyInjector;
+import Model.IQuestionDAO;
+import Model.mock.QuestionDAOMock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

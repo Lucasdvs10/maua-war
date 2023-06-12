@@ -1,6 +1,6 @@
 package tests.unit.usecases;
 
-import Adapters.mock.QuestionDAOMock;
+import Model.mock.QuestionDAOMock;
 import domain.entities.Question;
 import domain.entities.eventsystem.EventManager;
 import org.junit.jupiter.api.Assertions;

@@ -1,11 +1,11 @@
-package Adapters.mock;
+package Model.mock;
 
 import domain.entities.Question;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class QuestionDAOMock implements Adapters.IQuestionDAO{
+public class QuestionDAOMock implements Model.IQuestionDAO{
     private ArrayList<Question> _questionsDBMock;
 
     public QuestionDAOMock() {
@@ -66,6 +66,31 @@ public class QuestionDAOMock implements Adapters.IQuestionDAO{
         _questionsDBMock.get(8).AddAlternativeToHashMap('B', "Um número com sinal negativo");
         _questionsDBMock.get(8).AddAlternativeToHashMap('C', "Nada, pois não compila");
         _questionsDBMock.get(8).AddAlternativeToHashMap('D', "12345100000");
+
+        this._questionsDBMock.add(new Question("Qual afirmação condiz com\nas formas normais de\nprojeção de banco de dados", 'B', 10));
+        _questionsDBMock.get(9).AddAlternativeToHashMap('A', "Atributos devem depender de chaves");
+        _questionsDBMock.get(9).AddAlternativeToHashMap('B', "Atributos devem ser atômicos");
+        _questionsDBMock.get(9).AddAlternativeToHashMap('C', "Atributos devem ser compreensiveis");
+        _questionsDBMock.get(9).AddAlternativeToHashMap('D', "Um atributo pode ser multivalorado");
+
+        this._questionsDBMock.add(new Question("Qual das seguintes linguas\né a mais antiga?", 'A', 11));
+        _questionsDBMock.get(10).AddAlternativeToHashMap('A', "Python");
+        _questionsDBMock.get(10).AddAlternativeToHashMap('B', "Java");
+        _questionsDBMock.get(10).AddAlternativeToHashMap('C', "Kotlin");
+        _questionsDBMock.get(10).AddAlternativeToHashMap('D', "Swift");
+
+        this._questionsDBMock.add(new Question("Em um banco de dados\no que é uma relação?", 'B', 12));
+        _questionsDBMock.get(11).AddAlternativeToHashMap('A', "O cabeçalho da coluna");
+        _questionsDBMock.get(11).AddAlternativeToHashMap('B', "A tabela em si");
+        _questionsDBMock.get(11).AddAlternativeToHashMap('C', "Cada linha da tabela");
+        _questionsDBMock.get(11).AddAlternativeToHashMap('D', "Tipos de valores de um atributo");
+
+        this._questionsDBMock.add(new Question("Defina a integridade\nde entidade", 'A', 13));
+        _questionsDBMock.get(12).AddAlternativeToHashMap('A', "Nenhuma chave primaria pode ser NULL");
+        _questionsDBMock.get(12).AddAlternativeToHashMap('B', "Uma tupla deve se referir a outra");
+        _questionsDBMock.get(12).AddAlternativeToHashMap('C', "Regras impostas pela aplicação");
+        _questionsDBMock.get(12).AddAlternativeToHashMap('D', "Conjunto de valores possíveis de um atributo");
+
     }
 
     @Override

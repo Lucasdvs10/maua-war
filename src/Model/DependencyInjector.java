@@ -1,7 +1,7 @@
-package Adapters;
+package Model;
 
-import Adapters.connection_database.DAO.QuestionDAOMYSQL;
-import Adapters.mock.QuestionDAOMock;
+import Model.connection_database.DAO.QuestionDAOMYSQL;
+import Model.mock.QuestionDAOMock;
 
 public class DependencyInjector {
     public static boolean TestModeOn = true;

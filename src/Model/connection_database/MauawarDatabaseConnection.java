@@ -1,4 +1,4 @@
-package Adapters.connection_database;
+package Model.connection_database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

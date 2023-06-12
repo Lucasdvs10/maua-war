@@ -1,6 +1,6 @@
-package Adapters.connection_database.DAO;
+package Model.connection_database.DAO;
 
-import Adapters.connection_database.MauawarDatabaseConnection;
+import Model.connection_database.MauawarDatabaseConnection;
 import domain.entities.Question;
 
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 
-public class QuestionDAOMYSQL implements Adapters.IQuestionDAO {
+public class QuestionDAOMYSQL implements Model.IQuestionDAO {
     
     @Override
     public void RegisterQuestion(Question question){

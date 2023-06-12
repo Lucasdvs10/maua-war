@@ -1,6 +1,5 @@
 package UI;
 
-import Adapters.IQuestionDAO;
 import UI.UIEntitites.BlockButton;
 import domain.entities.Block;
 import domain.entities.Player;

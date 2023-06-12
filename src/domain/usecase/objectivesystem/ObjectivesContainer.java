@@ -7,7 +7,7 @@ import domain.entities.eventsystem.EventManager;
 public class ObjectivesContainer { //Aqui nós vamos instanciar todos os objetivos e conecta-los aos seus eventos
 
     public ObjectivesContainer(Player[] allPlayersArray, Block[] allBlocksArray) {
-        OBJAnswerAnAmountOfQuestions objAnswerAnAmountOfQuestions = new OBJAnswerAnAmountOfQuestions(5, allPlayersArray);
+        OBJAnswerAnAmountOfQuestions objAnswerAnAmountOfQuestions = new OBJAnswerAnAmountOfQuestions(9, allPlayersArray);
         OBJDominateAnAmountOfBlocks objDominateAnAmountOfBlocks = new OBJDominateAnAmountOfBlocks(5, allPlayersArray);
 
 

@@ -1,7 +1,7 @@
 package UI;
 
-import Adapters.DependencyInjector;
-import Adapters.IQuestionDAO;
+import Model.DependencyInjector;
+import Model.IQuestionDAO;
 import domain.entities.Question;
 
 import javax.swing.*;

@@ -1,7 +1,7 @@
 package UI;
 
-import Adapters.DependencyInjector;
-import Adapters.IQuestionDAO;
+import Model.DependencyInjector;
+import Model.IQuestionDAO;
 import UI.UIEntitites.BlockButton;
 import UI.UIEntitites.NeighboursMapper;
 import UI.UIEntitites.RoundCounterDisplay;
@@ -9,7 +9,6 @@ import UI.UIEntitites.WhooseTurnItIsDisplay;
 import domain.entities.Block;
 import domain.entities.Player;
 import domain.entities.eventsystem.EventManager;
-import domain.entities.eventsystem.IEventListener;
 import domain.entities.eventsystem.IPlayerEventListener;
 import domain.usecase.ManagePlayersTurnUseCase;
 import domain.usecase.ManageRoundsUseCase;
@@ -314,7 +313,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 520, -1, -1));
 
-        jTextField7.setText("Domine 4 blocos");
+        jTextField7.setText("Domine 6 blocos");
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
@@ -322,7 +321,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         });
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 600, 190, -1));
 
-        jTextField8.setText("Responda 30 perguntas");
+        jTextField8.setText("Responda 10 perguntas");
         getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 640, 190, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\lucas\\Desktop\\Projetos atuais\\maua-war\\src\\UI\\Images\\tabuleiro.png")); // NOI18N

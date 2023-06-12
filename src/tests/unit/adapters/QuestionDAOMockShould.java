@@ -1,6 +1,6 @@
 package tests.unit.adapters;
 
-import Adapters.mock.QuestionDAOMock;
+import Model.mock.QuestionDAOMock;
 import domain.entities.Question;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

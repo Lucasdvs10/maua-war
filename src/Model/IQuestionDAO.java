@@ -1,4 +1,4 @@
-package Adapters;
+package Model;
 
 
 import domain.entities.Question;
