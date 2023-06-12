@@ -91,6 +91,12 @@ public class QuestionDAOMock implements Model.IQuestionDAO{
         _questionsDBMock.get(12).AddAlternativeToHashMap('C', "Regras impostas pela aplicação");
         _questionsDBMock.get(12).AddAlternativeToHashMap('D', "Conjunto de valores possíveis de um atributo");
 
+        this._questionsDBMock.add(new Question("Qual palavra-chave define\numa chave primaria?", 'C', 14));
+        _questionsDBMock.get(13).AddAlternativeToHashMap('A', "FOREIGN KEY");
+        _questionsDBMock.get(13).AddAlternativeToHashMap('B', "UNIQUE");
+        _questionsDBMock.get(13).AddAlternativeToHashMap('C', "PRIMARY KEY");
+        _questionsDBMock.get(13).AddAlternativeToHashMap('D', "DEFATULT");
+
     }
 
     @Override
