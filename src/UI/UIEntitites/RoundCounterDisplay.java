@@ -5,20 +5,16 @@ import domain.entities.eventsystem.IEventListener;
 import domain.usecase.ManageRoundsUseCase;
 
 
-public class RoundCounterDisplay implements IEventListener {
+public class RoundCounterDisplay extends javax.swing.JTextField implements IEventListener {
     ManageRoundsUseCase roundsUseCase;
     @Override
     public void OnEventRaised() {
-        ShowMessage(String.format("Round: %d", roundsUseCase.get_currentRound()));
+        setText(String.format("Round: %d", roundsUseCase.get_currentRound()));
     }
 
     public RoundCounterDisplay(ManageRoundsUseCase useCase) {
         roundsUseCase = useCase;
         EventManager.SubscribeInEvent("EV_NEXT_ROUND", this);
+        setText(String.format("Round: %d", roundsUseCase.get_currentRound()));
     }
-
-    public void ShowMessage(String messageString) {
-        System.out.println(messageString);
-    }
-
 }

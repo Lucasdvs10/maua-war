@@ -17,8 +17,11 @@ public class OBJDominateAnAmountOfBlocks implements IPlayerEventListener {
         int currentPoints = _playersPointsHashMap.get(player);
         _playersPointsHashMap.put(player, ++currentPoints);
 
+        System.out.println("Dominou um blco!");
+
         if(currentPoints >= _amountToDominate){
             EventManager.RaiseAnPlayerEvent("PL_COMPLETED_OBJ", player);
+            System.out.println(String.format("%s venceu!", player.GetPlayerName()));
         }
     }
 

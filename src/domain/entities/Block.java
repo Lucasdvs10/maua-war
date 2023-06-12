@@ -55,8 +55,12 @@ public class Block {
         this._maxLife = _maxLife;
     }
 
-    public String get_blockName() {
-        return String.format("Bloco %s (%d)", _blockName, _currentLife);
+    public String get_blockNameAndLife() {
+        return String.format("%s (%d)", _blockName, _currentLife);
+    }
+
+    public String get_blockName(){
+        return _blockName;
     }
 
     public int get_currentLife() {

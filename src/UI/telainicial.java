@@ -12,7 +12,7 @@ public class telainicial extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        numberOfPlayersDropDown = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -39,14 +39,14 @@ public class telainicial extends javax.swing.JDialog {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 610, -1, 60));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 jogadores", "3 jogadores", "4 jogadores" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        numberOfPlayersDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 jogadores", "3 jogadores", "4 jogadores" }));
+        numberOfPlayersDropDown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, -1, -1));
+        getContentPane().add(numberOfPlayersDropDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, -1, -1));
 
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\lucas\\Downloads\\mauawar_telainicio2.png")); // NOI18N
@@ -65,9 +65,11 @@ public class telainicial extends javax.swing.JDialog {
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        GameScreen jgame = new GameScreen();
+        int numberOfPlayers = numberOfPlayersDropDown.getSelectedIndex()+2;
+        GameScreen jgame = new GameScreen(numberOfPlayers);
         jgame.show();
-        
+//
+//        setVisible(false);
         dispose();
     }
 
@@ -112,5 +114,5 @@ public class telainicial extends javax.swing.JDialog {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
 
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> numberOfPlayersDropDown;
 }

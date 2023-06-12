@@ -18,6 +18,7 @@ public class OBJAnswerAnAmountOfQuestions implements IPlayerEventListener {
         for(Player player : playersArray){
             this._playerPointsHashMap.put(player, 0);
         }
+
     }
 
     public OBJAnswerAnAmountOfQuestions(int _amountToAnswer, HashMap<Player, Integer> _playerPointsHashMap) {
@@ -29,6 +30,7 @@ public class OBJAnswerAnAmountOfQuestions implements IPlayerEventListener {
     @Override
     public void OnPlayerEventRaised(Player player) {
         PlayerAnsweredQuestionCorrectly(player);
+
     }
 
     public void PlayerAnsweredQuestionCorrectly(Player player) {
