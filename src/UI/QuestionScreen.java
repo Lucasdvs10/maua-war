@@ -9,7 +9,7 @@ import domain.usecase.CheckAnswerUseCase;
 import domain.usecase.PullQuestionsUseCase;
 
 import javax.swing.*;
-
+/*tela das questões com banco*/
 public class QuestionScreen extends javax.swing.JFrame {
     PullQuestionsUseCase _pullQuestionsUseCase;
     Question _question;
