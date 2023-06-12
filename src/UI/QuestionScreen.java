@@ -179,7 +179,7 @@ public class QuestionScreen extends javax.swing.JFrame {
                 blockEntity.set_currentLife(blockEntity.get_maxLife());
             }
         }
-        _blockButton.setText(blockEntity.get_blockName());
+        _blockButton.setText(blockEntity.get_blockNameAndLife());
         dispose();
     }
 

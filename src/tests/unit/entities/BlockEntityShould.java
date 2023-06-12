@@ -37,10 +37,10 @@ public class BlockEntityShould {
     public void Get_Name_In_The_Right_Format(){
         Block myBlock = new Block("A", 5);
 
-        Assertions.assertEquals("A (5)", myBlock.get_blockName());
+        Assertions.assertEquals("A (5)", myBlock.get_blockNameAndLife());
 
         myBlock.set_currentLife(2);
 
-        Assertions.assertEquals("A (2)", myBlock.get_blockName());
+        Assertions.assertEquals("A (2)", myBlock.get_blockNameAndLife());
     }
 }

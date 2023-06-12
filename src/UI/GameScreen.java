@@ -3,6 +3,7 @@ package UI;
 import Adapters.DependencyInjector;
 import Adapters.IQuestionDAO;
 import UI.UIEntitites.BlockButton;
+import UI.UIEntitites.NeighboursMapper;
 import UI.UIEntitites.RoundCounterDisplay;
 import UI.UIEntitites.WhooseTurnItIsDisplay;
 import domain.entities.Block;
@@ -12,7 +13,9 @@ import domain.usecase.ManagePlayersTurnUseCase;
 import domain.usecase.ManageRoundsUseCase;
 import domain.usecase.objectivesystem.ObjectivesContainer;
 
+import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
 import java.util.Random;
 
 public class GameScreen extends javax.swing.JFrame {
@@ -35,6 +38,8 @@ public class GameScreen extends javax.swing.JFrame {
     ObjectivesContainer objectivesContainer;
     Block[] _allBlocksContainer;
     BlockButton[] _allBlockButtonsContainer;
+
+    NeighboursMapper _neighboursMapper;
 
     public GameScreen() {
         _questionDAO = DependencyInjector.GetQuestionDAO();
@@ -85,19 +90,18 @@ public class GameScreen extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         _allBlocksContainer = new Block[]{
-                blocoJBtn.get_blockEntity(),
-                blocoRBtn.get_blockEntity(),
-                blocoRBtn.get_blockEntity(),
-                ginasioBtn.get_blockEntity(),
-                blocoHBtn.get_blockEntity(),
-                blocoFBtn.get_blockEntity(),
-                blocoEBtn.get_blockEntity(),
-                blocoSBtn.get_blockEntity(),
-                blocoWBtn.get_blockEntity(),
-                blocoGBtn.get_blockEntity(),
-                blocoVBtn.get_blockEntity(),
-                blocoLBtn.get_blockEntity(),
-                blocoABtn.get_blockEntity()
+                blocoJBtn.get_blockEntity(), //0
+                blocoRBtn.get_blockEntity(), //1
+                ginasioBtn.get_blockEntity(),//2
+                blocoHBtn.get_blockEntity(), //3
+                blocoFBtn.get_blockEntity(), //4
+                blocoEBtn.get_blockEntity(), //5
+                blocoSBtn.get_blockEntity(), //6
+                blocoWBtn.get_blockEntity(), //7
+                blocoGBtn.get_blockEntity(), //8
+                blocoVBtn.get_blockEntity(), //9
+                blocoLBtn.get_blockEntity(), //10
+                blocoABtn.get_blockEntity()  //11
         };
 
         _allBlockButtonsContainer = new BlockButton[]{
@@ -116,6 +120,8 @@ public class GameScreen extends javax.swing.JFrame {
                 blocoABtn
         };
 
+        _neighboursMapper = new NeighboursMapper(_allBlocksContainer);
+
         objectivesContainer = new ObjectivesContainer(_activePlayersArray, _allBlocksContainer);
 
         jTextArea1.setColumns(20);
@@ -133,7 +139,7 @@ public class GameScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        blocoJBtn.setText(blocoJBtn.get_blockEntity().get_blockName());
+        blocoJBtn.setText(blocoJBtn.get_blockEntity().get_blockNameAndLife());
         blocoJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoJActionPerformed(evt);
@@ -141,7 +147,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 200, 110));
 
-        blocoRBtn.setText(blocoRBtn.get_blockEntity().get_blockName());
+        blocoRBtn.setText(blocoRBtn.get_blockEntity().get_blockNameAndLife());
         blocoRBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoRActionPerformed(evt);
@@ -149,7 +155,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoRBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 150, 150));
 
-        ginasioBtn.setText(ginasioBtn.get_blockEntity().get_blockName());
+        ginasioBtn.setText(ginasioBtn.get_blockEntity().get_blockNameAndLife());
         ginasioBtn.setAlignmentX(3.0F);
         ginasioBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         ginasioBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +165,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(ginasioBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 260, 110));
 
-        blocoHBtn.setText(blocoHBtn.get_blockEntity().get_blockName());
+        blocoHBtn.setText(blocoHBtn.get_blockEntity().get_blockNameAndLife());
         blocoHBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoHBtnActionPerformed(evt);
@@ -167,7 +173,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoHBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, 160, 100));
 
-        blocoFBtn.setText(blocoFBtn.get_blockEntity().get_blockName());
+        blocoFBtn.setText(blocoFBtn.get_blockEntity().get_blockNameAndLife());
         blocoFBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoFBtnActionPerformed(evt);
@@ -175,7 +181,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoFBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 200, 120));
 
-        blocoEBtn.setText(blocoEBtn.get_blockEntity().get_blockName());
+        blocoEBtn.setText(blocoEBtn.get_blockEntity().get_blockNameAndLife());
         blocoEBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoEBtnActionPerformed(evt);
@@ -183,7 +189,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoEBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, 260, 140));
 
-        blocoSBtn.setText(blocoSBtn.get_blockEntity().get_blockName());
+        blocoSBtn.setText(blocoSBtn.get_blockEntity().get_blockNameAndLife());
         blocoSBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoSBtnActionPerformed(evt);
@@ -191,7 +197,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoSBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 460, 180, 100));
 
-        blocoWBtn.setText(blocoWBtn.get_blockEntity().get_blockName());
+        blocoWBtn.setText(blocoWBtn.get_blockEntity().get_blockNameAndLife());
         blocoWBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoWBtnActionPerformed(evt);
@@ -199,7 +205,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoWBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 110, 200));
 
-        blocoGBtn.setText(blocoGBtn.get_blockEntity().get_blockName());
+        blocoGBtn.setText(blocoGBtn.get_blockEntity().get_blockNameAndLife());
         blocoGBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoGBtnActnPerformed(evt);
@@ -207,7 +213,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoGBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 200, 120));
 
-        blocoVBtn.setText(blocoVBtn.get_blockEntity().get_blockName());
+        blocoVBtn.setText(blocoVBtn.get_blockEntity().get_blockNameAndLife());
         blocoVBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoVBtnActionPerformed(evt);
@@ -215,7 +221,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoVBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 90, 190));
 
-        blocoLBtn.setText(blocoLBtn.get_blockEntity().get_blockName());
+        blocoLBtn.setText(blocoLBtn.get_blockEntity().get_blockNameAndLife());
         blocoLBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoLBtnActionPerformed(evt);
@@ -223,7 +229,7 @@ public class GameScreen extends javax.swing.JFrame {
         });
         getContentPane().add(blocoLBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 200, 110));
 
-        blocoABtn.setText(blocoABtn.get_blockEntity().get_blockName());
+        blocoABtn.setText(blocoABtn.get_blockEntity().get_blockNameAndLife());
         blocoABtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blocoABtnActionPerformed(evt);
@@ -333,38 +339,69 @@ public class GameScreen extends javax.swing.JFrame {
         }
     }
 
+    private boolean CheckIfNeibourIsDominatedByCurrentPlayer(BlockButton blockButton) {
+        HashMap<String, Block[]> neigboursMap = _neighboursMapper.get_neighboursMap();
+        Block[] neighboursArray = neigboursMap.get(blockButton.get_blockEntity().get_blockName());
+
+
+        for(Block neighbour : neighboursArray){
+            if(neighbour.get_isDominated() && neighbour.get_playerWhoDominated() == get_CurrentPlayerInstance()){
+                return true;
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "Movimento inválido!\nAtaque apenas blocos vizinhos!");
+
+        return false;
+    }
+
     private void blocoJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoJBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoJBtn);
         jquestion.show(); //mostra a questão
+
     }
 
+
     private void blocoWBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoWBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoWBtn);
         jquestion.show(); //mostra a questão
     }
 
     private void ginasioBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(ginasioBtn))
+            return;
+
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), ginasioBtn);
         jquestion.show(); //mostra a questão
         
     }
 
     private void blocoGBtnActnPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoGBtn))
+            return;
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoGBtn);
         jquestion.show(); //mostra a questão
         
     }
 
     private void blocoFBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoFBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoFBtn);
         jquestion.show(); //mostra a questão
     }
 
     private void blocoEBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoEBtn))
+            return;
+
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoEBtn);
         jquestion.show(); //mostra a questão
@@ -372,35 +409,49 @@ public class GameScreen extends javax.swing.JFrame {
 
     private void blocoABtnActionPerformed(java.awt.event.ActionEvent evt) {
 
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoABtn))
+            return;
+
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoABtn);
         jquestion.show(); //mostra a questão
     }
 
     private void blocoVBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
 
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoVBtn))
+            return;
+
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoVBtn);
         jquestion.show(); //mostra a questão
     }
 
     private void blocoHBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoHBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoHBtn);
         jquestion.show(); //mostra a questão
     }
 
     private void blocoRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoRBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoRBtn);
         jquestion.show(); //mostra a questão
     }
 
     private void blocoLBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoLBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoLBtn);
         jquestion.show(); //mostra a questão
     }
 
     private void blocoSBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoSBtn))
+            return;
 
         QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoSBtn);
         jquestion.show(); //mostra a questão

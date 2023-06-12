@@ -12,7 +12,10 @@
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/NeighboursMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIEntitites/NeighboursMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/unit/entities/BlockEntityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/entities/BlockEntityShould.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,7 @@
       <module name="maua-war" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UI.*" />
+          <option name="PATTERN" value="UI.UIEntitites.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,12 +190,27 @@
       <workItem from="1685656192560" duration="3110000" />
       <workItem from="1685918697433" duration="823000" />
       <workItem from="1686171189015" duration="14000" />
-      <workItem from="1686522146811" duration="3190000" />
+      <workItem from="1686522146811" duration="6423000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/GameScreen.java</url>
+          <line>428</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
