@@ -50,7 +50,6 @@ public class QuestionScreen extends javax.swing.JFrame {
         alternativeAnswerC = new javax.swing.JTextPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         questionStatement = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
 
         jScrollPane2.setViewportView(jTextPane2);
 
@@ -150,34 +149,17 @@ public class QuestionScreen extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
+
+
+
         pack();
     }
 
-    jButton2.setText("Voltar");
-    jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            jButton2MouseClicked(evt);
-        }
-    });
-    jButton2.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            jButton2ActionPerformed(evt);
-        }
-    });
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-        telainicial tinicial = new telainicial();
-        tinicial.show();
-        this.dispose();
-    }                                        
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {                                      
-        // TODO add your handling code here:
-    }
-    getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
 
-    pack();
+
+
 
     private void AlternativeAButtonAction(java.awt.event.ActionEvent evt) {
         boolean answerIsRight = _checkAnswerUseCase.VerifyPlayerAnswer(_player, _question, 'A');
@@ -285,7 +267,6 @@ public class QuestionScreen extends javax.swing.JFrame {
 
 
     private javax.swing.JButton optionButtonA;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton optionButtonB;
     private javax.swing.JButton optionButtonC;
     private javax.swing.JButton optionButtonD;

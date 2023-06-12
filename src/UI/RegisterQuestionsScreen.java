@@ -26,6 +26,7 @@ public class RegisterQuestionsScreen extends javax.swing.JDialog {
         secondAnswer = new javax.swing.JTextField();
         fourthAnswer = new javax.swing.JTextField();
         submitButton = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +64,9 @@ public class RegisterQuestionsScreen extends javax.swing.JDialog {
                             .addComponent(fourthAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(296, 296, 296)
-                        .addComponent(submitButton)))
+                        .addComponent(submitButton))
+                        .addComponent(jButton2)
+                )
                 .addContainerGap(171, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -81,10 +84,34 @@ public class RegisterQuestionsScreen extends javax.swing.JDialog {
                 .addComponent(fourthAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(submitButton)
+                    .addComponent(jButton2)
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+        jButton2.setText("Voltar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         pack();
+    }
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        telainicial tinicial = new telainicial(null, false);
+        tinicial.show();
+        this.dispose();
     }
 
     private void SubmitButtonPressedEvent(java.awt.event.ActionEvent evt) {
@@ -161,6 +188,7 @@ public class RegisterQuestionsScreen extends javax.swing.JDialog {
         });
     }
 
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton submitButton;
     private javax.swing.JTextField statement;
     private javax.swing.JTextField correctAnswer;

@@ -10,7 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Model/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/mock/QuestionDAOMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,28 +205,18 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
-          <line>163</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
-          <line>196</line>
+          <line>176</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
-          <line>212</line>
+          <line>192</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
-          <line>227</line>
+          <line>207</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java</url>
