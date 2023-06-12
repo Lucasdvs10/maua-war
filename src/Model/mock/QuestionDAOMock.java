@@ -8,6 +8,40 @@ import java.util.Random;
 public class QuestionDAOMock implements Model.IQuestionDAO{
     private ArrayList<Question> _questionsDBMock;
 
+    @Override
+    public void RegisterQuestion(Question question) {
+        this._questionsDBMock.add(question);
+    }
+
+    @Override
+    public Question GetQuestionById(int questionId) {
+        for (Question question : _questionsDBMock) {
+            int currentQuestionId = question.get_questionId();
+
+            if (currentQuestionId == questionId)
+                return question;
+        }
+        return null;
+    }
+
+    @Override
+    public Question GetRandomQuestion() {
+        Random random = new Random();
+
+        int randomIndex = random.nextInt(1, this._questionsDBMock.size()+1);
+
+        return GetQuestionById(randomIndex);
+    }
+
+    @Override
+    public int GetDataBaseSize() {
+        return _questionsDBMock.size();
+    }
+
+    public ArrayList<Question> get_questionsDBMock() {
+        return _questionsDBMock;
+    }
+
     public QuestionDAOMock() {
         this._questionsDBMock = new ArrayList<>();
         this._questionsDBMock.add(new Question("Dado a string 'morangos' salva na variável fruta,\no que o método fruta.substring(2,5) retornaria?", 'A', 1));
@@ -97,39 +131,5 @@ public class QuestionDAOMock implements Model.IQuestionDAO{
         _questionsDBMock.get(13).AddAlternativeToHashMap('C', "PRIMARY KEY");
         _questionsDBMock.get(13).AddAlternativeToHashMap('D', "DEFATULT");
 
-    }
-
-    @Override
-    public void RegisterQuestion(Question question) {
-        this._questionsDBMock.add(question);
-    }
-
-    @Override
-    public Question GetQuestionById(int questionId) {
-        for (Question question : _questionsDBMock) {
-            int currentQuestionId = question.get_questionId();
-
-            if (currentQuestionId == questionId)
-                return question;
-        }
-        return null;
-    }
-
-    @Override
-    public Question GetRandomQuestion() {
-        Random random = new Random();
-
-        int randomIndex = random.nextInt(1, this._questionsDBMock.size()+1);
-
-        return GetQuestionById(randomIndex);
-    }
-
-    @Override
-    public int GetDataBaseSize() {
-        return _questionsDBMock.size();
-    }
-
-    public ArrayList<Question> get_questionsDBMock() {
-        return _questionsDBMock;
     }
 }

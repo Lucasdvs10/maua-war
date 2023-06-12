@@ -10,19 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/DependencyInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DependencyInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/IQuestionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IQuestionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/connection_database/DAO/QuestionDAOMYSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/connection_database/DAO/QuestionDAOMYSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/connection_database/MauawarDatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/connection_database/MauawarDatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/mock/QuestionDAOMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/adapters/DependencyInjectorShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/adapters/DependencyInjectorShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/adapters/QuestionDAOMockShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/adapters/QuestionDAOMockShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/unit/usecases/PullQuestionsUseCaseShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/unit/usecases/PullQuestionsUseCaseShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/mock/QuestionDAOMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +187,7 @@
       <workItem from="1686171189015" duration="14000" />
       <workItem from="1686522146811" duration="6423000" />
       <workItem from="1686531093335" duration="4455000" />
-      <workItem from="1686589240746" duration="9529000" />
+      <workItem from="1686589240746" duration="9973000" />
     </task>
     <servers />
   </component>
