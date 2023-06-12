@@ -13,6 +13,7 @@ import domain.entities.eventsystem.IEventListener;
 import domain.entities.eventsystem.IPlayerEventListener;
 import domain.usecase.ManagePlayersTurnUseCase;
 import domain.usecase.ManageRoundsUseCase;
+import domain.usecase.PullQuestionsUseCase;
 import domain.usecase.objectivesystem.ObjectivesContainer;
 
 import javax.swing.*;
@@ -23,6 +24,7 @@ import java.util.Random;
 public class GameScreen extends javax.swing.JFrame implements IPlayerEventListener {
 
     IQuestionDAO _questionDAO;
+    PullQuestionsUseCase _pullQuestionsUseCase;
     Player[] _allPlayersArray = new Player[]{
             new Player(1, Color.BLUE),
             new Player(2, Color.RED),
@@ -52,6 +54,8 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         _manageRoundsUseCase = new ManageRoundsUseCase("EV_LAST_PLAYER_PLAYED");
 
         _activePlayersArray = new Player[_numberOfPlayers];
+        _pullQuestionsUseCase = new PullQuestionsUseCase(_questionDAO);
+
 
         for (int i = 0; i<_numberOfPlayers; i++){
             _activePlayersArray[i] = _allPlayersArray[i];
@@ -68,7 +72,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         _manageRoundsUseCase = new ManageRoundsUseCase("EV_LAST_PLAYER_PLAYED");
 
         _activePlayersArray = new Player[_numberOfPlayers];
-
+        _pullQuestionsUseCase = new PullQuestionsUseCase(_questionDAO);
         for (int i = 0; i<_numberOfPlayers; i++){
             _activePlayersArray[i] = _allPlayersArray[i];
         }
@@ -402,7 +406,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoJBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoJBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoJBtn);
         jquestion.show(); //mostra a questão
 
     }
@@ -412,7 +416,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoWBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoWBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoWBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -420,7 +424,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(ginasioBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), ginasioBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), ginasioBtn);
         jquestion.show(); //mostra a questão
         
     }
@@ -428,7 +432,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
     private void blocoGBtnActnPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoGBtn))
             return;
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoGBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoGBtn);
         jquestion.show(); //mostra a questão
         
     }
@@ -437,7 +441,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoFBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoFBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoFBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -446,7 +450,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
             return;
 
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoEBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoEBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -455,7 +459,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoABtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoABtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoABtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -464,7 +468,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoVBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoVBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoVBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -472,7 +476,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoHBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoHBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoHBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -480,7 +484,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoRBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoRBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoRBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -488,7 +492,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoLBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoLBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoLBtn);
         jquestion.show(); //mostra a questão
     }
 
@@ -496,7 +500,7 @@ public class GameScreen extends javax.swing.JFrame implements IPlayerEventListen
         if(!CheckIfNeibourIsDominatedByCurrentPlayer(blocoSBtn))
             return;
 
-        QuestionScreen jquestion = new QuestionScreen(_questionDAO, get_CurrentPlayerInstance(), blocoSBtn);
+        QuestionScreen jquestion = new QuestionScreen(_pullQuestionsUseCase, get_CurrentPlayerInstance(), blocoSBtn);
         jquestion.show(); //mostra a questão
     }
 

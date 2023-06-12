@@ -11,9 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4dd4de-4d92-4725-996a-5d1d02bd1b91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adapters/mock/QuestionDAOMock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RegisterQuestionsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/telainicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/telainicial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/QuestionScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/QuestionScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/entities/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,8 +159,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.telainicial" />
-        <item itemvalue="Application.GameScreen" />
         <item itemvalue="JUnit.tests.unit in maua-war" />
+        <item itemvalue="Application.GameScreen" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Return_Question_With_Id_2" />
         <item itemvalue="JUnit.PullQuestionsUseCaseShould.Raise_An_Event_When_AnsweredList_Is_Full" />
       </list>
@@ -189,7 +191,8 @@
       <workItem from="1685918697433" duration="823000" />
       <workItem from="1686171189015" duration="14000" />
       <workItem from="1686522146811" duration="6423000" />
-      <workItem from="1686531093335" duration="3731000" />
+      <workItem from="1686531093335" duration="4455000" />
+      <workItem from="1686589240746" duration="7028000" />
     </task>
     <servers />
   </component>
@@ -204,9 +207,34 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/domain/usecase/objectivesystem/OBJDominateAnAmountOfBlocks.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
+          <line>164</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
+          <line>228</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/QuestionScreen.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/domain/usecase/PullQuestionsUseCase.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -219,11 +247,11 @@
     <SUITE FILE_PATH="coverage/maua_war$QuestionDAOMockShould.ic" NAME="QuestionDAOMockShould Coverage Results" MODIFIED="1683636471752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tests.unit.adapters.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/maua_war$tests_unit_in_maua_war.ic" NAME="tests.unit in maua-war Coverage Results" MODIFIED="1683632807831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>tests.unit.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/maua_war$DependencyInjectorShould_Return_Same_DAO_Mock_Instance.ic" NAME="DependencyInjectorShould.Return_Same_DAO_Mock_Instance Coverage Results" MODIFIED="1685281062455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tests.unit.adapters.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/maua_war$tests_unit_in_maua_war.ic" NAME="tests.unit in maua-war Coverage Results" MODIFIED="1686590601186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tests.unit.*</FILTER>
     </SUITE>
   </component>
 </project>

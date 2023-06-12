@@ -19,9 +19,9 @@ public class QuestionScreen extends javax.swing.JFrame {
 
     BlockButton _blockButton;
 
-    public QuestionScreen(IQuestionDAO questionDAO, Player player, BlockButton blockButton) {
+    public QuestionScreen(PullQuestionsUseCase pullQuestionsUseCase, Player player, BlockButton blockButton) {
         this._player = player;
-        _pullQuestionsUseCase = new PullQuestionsUseCase(questionDAO);
+        _pullQuestionsUseCase = pullQuestionsUseCase;
         _question = _pullQuestionsUseCase.GetNotAnsweredRandomQuestion();
         _checkAnswerUseCase = new CheckAnswerUseCase();
         _blockButton = blockButton;
@@ -160,8 +160,10 @@ public class QuestionScreen extends javax.swing.JFrame {
         System.out.println(_player.GetPlayerName());
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
-        if(answerIsRight)
+        if(answerIsRight){
             ChangeButtonColorAndApplyDamage();
+            _pullQuestionsUseCase.AddQuestionToAnsweredList(_question);
+        }
     }
 
     private void ChangeButtonColorAndApplyDamage() {
@@ -191,8 +193,10 @@ public class QuestionScreen extends javax.swing.JFrame {
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
 
-        if(answerIsRight)
+        if(answerIsRight){
             ChangeButtonColorAndApplyDamage();
+            _pullQuestionsUseCase.AddQuestionToAnsweredList(_question);
+        }
 
         dispose();
     }
@@ -205,8 +209,10 @@ public class QuestionScreen extends javax.swing.JFrame {
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
 
-        if(answerIsRight)
+        if(answerIsRight){
             ChangeButtonColorAndApplyDamage();
+            _pullQuestionsUseCase.AddQuestionToAnsweredList(_question);
+        }
         dispose();
     }
 
@@ -218,8 +224,10 @@ public class QuestionScreen extends javax.swing.JFrame {
 
         JOptionPane.showMessageDialog(null, String.format("A resposta está %s!", answerIsRight ? "correta" : "errada"));
 
-        if(answerIsRight)
+        if(answerIsRight){
             ChangeButtonColorAndApplyDamage();
+            _pullQuestionsUseCase.AddQuestionToAnsweredList(_question);
+        }
         dispose();
     }
 

@@ -27,6 +27,7 @@ public class PullQuestionsUseCase {
         while(_answeredQuestionsList.contains(question) || question == null){
             question = GetRandomQuestion();
         }
+        System.out.println(question.get_questionId());
 
         return question;
     }
